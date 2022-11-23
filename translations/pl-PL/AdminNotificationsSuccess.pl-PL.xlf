@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin-dev" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="b34a5361f169c417578d4bfcf924aff6">
+        <source>[1] products were successfully removed.</source>
+        <target>[1] products were successfully removed.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="abb8738509cd73014d30de00b1b16ebe">
+        <source>[1] products were successfully added.</source>
+        <target>[1] products were successfully added.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="dc6df66ef8a64a3bf228c70e64269a8e">
+        <source>The product was successfully removed.</source>
+        <target>The product was successfully removed.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="9cdbb80d4545ac63312bd530784829a3">
+        <source>The product was successfully added.</source>
+        <target>The product was successfully added.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="151648106e4bf98297882ea2ea1c4b0e">
+        <source>Update successful</source>
+        <target>Aktualizacja powiodła się</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b4a34d3f58b039e7685c2e39b5413757">
+        <source>Successful update.</source>
+        <target>Zaktualizowano pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e9d71289fdbe4799d4fe91ccc17be0af">
+        <source>The thumbnails were successfully regenerated.</source>
+        <target>Generowanie miniatur zakończone powodzeniem</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1b73f0da557b7b0773d0fc6b5fd0a3b4">
+        <source>Successful upload.</source>
+        <target>Przesłano pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="759d07e8bdf6d3a5863ed521009b3ac1">
+        <source>Duplication was completed successfully.</source>
+        <target>Kopiowanie zakończone pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="13f1ce18a02ac5293cf5a4274f9300de">
+        <source>The selected images have successfully been moved.</source>
+        <target>Wybrane zdjęcia zostały poprawnie przeniesione.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="714903406a224ca68890e377ea111388">
+        <source>Your cover image selection has been saved.</source>
+        <target>Twój wybór obrazu głównego został zapisany.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b2266c7007fff254b1a9373f8a648a1c">
+        <source>The image's shop association has been modified.</source>
+        <target>Powiązanie zdjęcia ze sklepem zostało zmodyfikowane.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="3a627484fcb2a5d110b44a390d5ee7c1">
+        <source>A zone has been assigned to the selection successfully.</source>
+        <target>Poprawnie przypisano zakres do zaznaczenia</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="be3af9d697c193da1a7dbfcf195050ea">
+        <source>Successful upgrade.</source>
+        <target>Uaktualniono pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="de360c8b5dd9a9fdd592b1c08b3b4a62">
+        <source>The status has been updated successfully</source>
+        <target>Status został pomyślnie zaktualizowany</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f86f7b91afe27e79305a6b07bdb0d3c0">
+        <source>Failed to update the status</source>
+        <target>Aktualizacja statusu nie powiodła się</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="79f062391903591d68e514a400e136cf">
+        <source>The status has been updated successfully.</source>
+        <target>Pomyślnie uaktualniono status</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c888438d14855d7d96a2724ee9c306bd">
+        <source>Settings updated</source>
+        <target>Zaktualizowano ustawienia</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="efc226b17e0532afff43be870bff0de7">
+        <source>The settings have been updated.</source>
+        <target>Ustawienia zostały zaktualizowane.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="20015706a8cbd457cbb6ea3e7d5dc9b3">
+        <source>Configuration updated</source>
+        <target>Konfiguracja zaktualizowana</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="7173e38e8a10ed379625687638ddfe74">
+        <source>Successful deletion</source>
+        <target>Pomyślne usunięcie</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="9dcfab12c54723f05853ee9d1581ce67">
+        <source>Successfully overwrote email templates for theme %s with locale %s</source>
+        <target>Pomyślnie zastąpiono szablony wiadomości e-mail dla motywu %s z ustawieniami narodowymi %s</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="fee15218c634e6df3e3409b28730db7c">
+        <source>Successfully generated email templates for theme %s with locale %s</source>
+        <target>Pomyślnie wygenerowano szablony wiadomości e-mail dla motywu %s z ustawieniami narodowymi %s</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="65a97071cf50d7bcca3efd2c8d3a5ccc">
+        <source>Email theme configuration saved successfully</source>
+        <target>Konfiguracja motywu wiadomości e-mail została pomyślnie zapisana</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="807ca4c2efc56c5ccb79b408d828283a">
+        <source>Test email for layout %layout% was successfully sent to %email%</source>
+        <target>Testowa wiadomość e-mail dla układu %layout% została pomyślnie wysłana na %email%</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ebc7584c0a97bc4aa867c11fc4760b3f">
+        <source>Your theme has been correctly exported: %path%</source>
+        <target>Twój szablon został poprawnie wyeksportowany: %path%</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6483df61619946ebf2427ba360df7ce5">
+        <source>The settings have been successfully updated.</source>
+        <target>Ustawienia zostały pomyślnie zaktualizowane.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="fb52feac670f0252be93737558eebdb7">
+        <source>Successful creation.</source>
+        <target>Utworzono pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="149cd107b688af7a007e739fd51ac919">
+        <source>Successful deletion.</source>
+        <target>Usunięto pomyślnie.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1802a23025825ae791c1eea0118ee5f0">
+        <source>The status has been successfully updated.</source>
+        <target>Status został pomyślnie zaktualizowany.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="02d5b938505dcda41a52ef3abcbd354a">
+        <source>The selection has been successfully deleted.</source>
+        <target>Pomyślnie usunięto zaznaczenie</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4f29bc7b6f8b0da95b46defd28f72618">
+        <source>Successful creation</source>
+        <target>Pomyślne utworzenie</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="893a9104a7f0ebd94a7f4171d1996c7d">
+        <source>The image was successfully deleted.</source>
+        <target>Pomyślnie usunięto obrazek</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="cc6450370541d1ecfdbdada739732ec1">
+        <source>Update successful.</source>
+        <target>Aktualizacja zakończona.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4a6c326f3ec43e638da38a44a21b5eb7">
+        <source>Comment successfully added.</source>
+        <target>Komentarz został pomyślnie dodany.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e27a3fee7c315373637c37dc3d62811d">
+        <source>Your symbol and format customizations have been successfully reset for this language.</source>
+        <target>Twoje dostosowania symboli i formatu zostały pomyślnie zresetowane dla tego języka.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f38f5974cdc23279ffe6d203641a8bdf">
+        <source>Settings updated.</source>
+        <target>Ustawienia zaktualizowane.</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
