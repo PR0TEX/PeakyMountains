@@ -1,659 +1,551 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file original="admin-dev/themes/default/template/controllers/images/content.tpl" source-language="en" target-language="pl" datatype="plaintext">
+  <file original="admin-dev" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
     <body>
-      <trans-unit id="874d3deed67e503cac1d8bc00417794a" approved="yes">
+      <trans-unit id="874d3deed67e503cac1d8bc00417794a">
         <source>Move images</source>
-        <target state="final">Przenieś zdjęcia</target>
-        <note>Line: 50</note>
+        <target>Przenieś zdjęcia</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="258606ef5a3ed5cd7e39da08435adec0" approved="yes">
+      <trans-unit id="258606ef5a3ed5cd7e39da08435adec0">
         <source>Regenerate thumbnails</source>
-        <target state="final">Wygeneruj ponownie miniatury</target>
-        <note>Line: 127</note>
+        <target>Wygeneruj ponownie miniatury</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="79750ba11832a44ccf92e15eb0e84ae4" approved="yes">
+      <trans-unit id="79750ba11832a44ccf92e15eb0e84ae4">
         <source>Select an image</source>
-        <target state="final">Wybierz obraz</target>
-        <note>Line: 72</note>
+        <target>Wybierz obraz</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="26e687808eb656fb38bd6e98f592e4f7" approved="yes">
+      <trans-unit id="26e687808eb656fb38bd6e98f592e4f7">
         <source>Select a format</source>
-        <target state="final">Wybierz format</target>
-        <note>Line: 85</note>
+        <target>Wybierz format</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d379cadd41b68efe7c945b4d85c72085" approved="yes">
+      <trans-unit id="d379cadd41b68efe7c945b4d85c72085">
         <source>Erase previous images</source>
-        <target state="final">Usuń poprzednie obrazki</target>
-        <note>Line: 106</note>
+        <target>Usuń poprzednie obrazki</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="admin-dev/themes/default/template/controllers/modules_positions/form.tpl" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="51a8b3a61ad63d4e5df2ce86870e39b8" approved="yes">
+      <trans-unit id="51a8b3a61ad63d4e5df2ce86870e39b8">
         <source>Transplant a module</source>
-        <target state="final">Przemieszczanie modułu</target>
-        <note>Line: 39</note>
+        <target>Przemieszczanie modułu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="97e34811d05eb0ee902aa3e190ea5efd" approved="yes">
+      <trans-unit id="97e34811d05eb0ee902aa3e190ea5efd">
         <source>Transplant to</source>
-        <target state="final">Przenieś do</target>
-        <note>Line: 55</note>
+        <target>Przenieś do</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d5f1381c5f97f928df4ef8d18c2a27c0" approved="yes">
+      <trans-unit id="d5f1381c5f97f928df4ef8d18c2a27c0">
         <source>Exceptions</source>
-        <target state="final">Wyjątki</target>
-        <note>Line: 81</note>
+        <target>Wyjątki</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="c5cc1164fe38560fcd4fb85ca074a789" approved="yes">
+      <trans-unit id="c5cc1164fe38560fcd4fb85ca074a789">
         <source>Available hooks</source>
-        <target state="final">Dostępne hooki</target>
-        <note>Line: 62</note>
+        <target>Dostępne hooki</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="407e15fbe496ef15d5cce04b0cbbebaf" approved="yes">
+      <trans-unit id="407e15fbe496ef15d5cce04b0cbbebaf">
         <source>Already registered hooks</source>
-        <target state="final">Już zarejestrowane haki</target>
-        <note>Line: 70</note>
+        <target>Już zarejestrowane haki</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="admin-dev/themes/default/template/controllers/modules_positions/list_modules.tpl" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="4ba24d91566786f5315acf453418dbb6" approved="yes">
+      <trans-unit id="4ba24d91566786f5315acf453418dbb6">
         <source>All modules</source>
-        <target state="final">Wszystkie moduły</target>
-        <note>Line: 51</note>
+        <target>Wszystkie moduły</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="c2f2fa871a47fd6ab9e8442ff4dd468d" approved="yes">
+      <trans-unit id="c2f2fa871a47fd6ab9e8442ff4dd468d">
         <source>Search for a hook</source>
-        <target state="final">Szukaj zaczepu</target>
-        <note>Line: 59</note>
+        <target>Szukaj zaczepu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="4c64748755160a1e441ed3dc34d6b827" approved="yes">
+      <trans-unit id="4c64748755160a1e441ed3dc34d6b827">
         <source>Display non-positionable hooks</source>
-        <target state="final">Wyświetl nie pozycjonowane zaczepy</target>
-        <note>Line: 73</note>
+        <target>Wyświetl nie pozycjonowane zaczepy</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d97628f4b34d5ca2a77cc1bfa7914aa9" approved="yes">
+      <trans-unit id="d97628f4b34d5ca2a77cc1bfa7914aa9">
         <source>Unhook</source>
-        <target state="final">Odczep</target>
-        <note>Line: 149</note>
+        <target>Odczep</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="feb6f2e19409f021e5fd65c51d21d254" approved="yes">
+      <trans-unit id="feb6f2e19409f021e5fd65c51d21d254">
         <source>Unhook the selection</source>
-        <target state="final">Odczep wybrane</target>
-        <note>Line: 185</note>
+        <target>Odczep wybrane</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="fdf4e26a28a557ccfae6ddea1881687e" approved="yes">
+      <trans-unit id="fdf4e26a28a557ccfae6ddea1881687e">
         <source>1 module selected</source>
-        <target state="final">Wybrano 1 moduł</target>
-        <note>Line: 179</note>
+        <target>Wybrano 1 moduł</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="2451f8c34b91d6d3b6e7ee63c23d13fc" approved="yes">
+      <trans-unit id="2451f8c34b91d6d3b6e7ee63c23d13fc">
         <source>modules selected</source>
-        <target state="final">wybrane moduły</target>
-        <note>Line: 181</note>
+        <target>wybrane moduły</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="classes/lang/KeysReference/ThemeLang.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="24e61dc70866cb84d375a6270035c7cf" approved="yes">
+      <trans-unit id="24e61dc70866cb84d375a6270035c7cf">
         <source>Full width</source>
-        <target state="final">Pełna szerokość</target>
-        <note>Line: 26</note>
+        <target>Pełna szerokość</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="63bd7d20cb7d515fe705bcda029ea776" approved="yes">
+      <trans-unit id="63bd7d20cb7d515fe705bcda029ea776">
         <source>Three columns</source>
-        <target state="final">Trzy kolumny</target>
-        <note>Line: 27</note>
+        <target>Trzy kolumny</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="710c71f05157207e5c47015fc032564d" approved="yes">
+      <trans-unit id="710c71f05157207e5c47015fc032564d">
         <source>Two columns, small left column</source>
-        <target state="final">Dwie kolumny, mała lewa kolumna</target>
-        <note>Line: 28</note>
+        <target>Dwie kolumny, mała lewa kolumna</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="4c318832b92e5f7b818aba037e1ed5ac" approved="yes">
+      <trans-unit id="4c318832b92e5f7b818aba037e1ed5ac">
         <source>Two columns, small right column</source>
-        <target state="final">Dwie kolumny, mała prawa kolumna</target>
-        <note>Line: 29</note>
+        <target>Dwie kolumny, mała prawa kolumna</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="05559f48f0ea41ebb03f6d08b95e1e25" approved="yes">
+      <trans-unit id="05559f48f0ea41ebb03f6d08b95e1e25">
         <source>No side columns, ideal for distraction-free pages such as product pages.</source>
-        <target state="final">Bez kolumn bocznych — idealny układ na stronę pozbawioną elementów rozpraszających uwagę, na przykład stronę produktu.</target>
-        <note>Line: 31</note>
+        <target>Bez kolumn bocznych — idealny układ na stronę pozbawioną elementów rozpraszających uwagę, na przykład stronę produktu.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="387bf9bbb8c3c3fd021aa85970554839" approved="yes">
+      <trans-unit id="387bf9bbb8c3c3fd021aa85970554839">
         <source>One large central column and 2 side columns.</source>
-        <target state="final">Jedna duża środkowa kolumna i 2 kolumny boczne.</target>
-        <note>Line: 33</note>
+        <target>Jedna duża środkowa kolumna i 2 kolumny boczne.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="74266ad9cb6f32c9da66592ca748ef8d" approved="yes">
+      <trans-unit id="74266ad9cb6f32c9da66592ca748ef8d">
         <source>Two columns with a small left column.</source>
-        <target state="final">Dwie kolumny z małą kolumną lewą.</target>
-        <note>Line: 35</note>
+        <target>Dwie kolumny z małą kolumną lewą.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="fefe6a1aca554473c855e076d0376b52" approved="yes">
+      <trans-unit id="fefe6a1aca554473c855e076d0376b52">
         <source>Two columns with a small right column.</source>
-        <target state="final">Dwie kolumny z małą kolumną prawą.</target>
-        <note>Line: 37</note>
+        <target>Dwie kolumny z małą kolumną prawą.</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCmsContentController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="d0d4e3688fdaee5afa292083b855e143" approved="yes">
+      <trans-unit id="d0d4e3688fdaee5afa292083b855e143">
         <source>Add new category</source>
-        <target state="final">Dodaj nową kategorie</target>
-        <note>Line: 187</note>
+        <target>Dodaj nową kategorie</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="4fb1231b615c9fc59cdb5729577b0919" approved="yes">
+      <trans-unit id="4fb1231b615c9fc59cdb5729577b0919">
         <source>Edit category: %name%</source>
-        <target state="final">Edytuj kategorię: %name%</target>
-        <note>Line: 190</note>
+        <target>Edytuj kategorię: %name%</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="aa6f77f824eff8e896510f1bbaf9f8e5" approved="yes">
+      <trans-unit id="aa6f77f824eff8e896510f1bbaf9f8e5">
         <source>Add new page</source>
-        <target state="final">Dodaj nową stronę</target>
-        <note>Line: 195</note>
+        <target>Dodaj nową stronę</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="23b8a311aed9d1b2e76424acc4eff45f" approved="yes">
+      <trans-unit id="23b8a311aed9d1b2e76424acc4eff45f">
         <source>Edit page: %meta_title%</source>
-        <target state="final">Edytuj stronę: %meta_title%</target>
-        <note>Line: 198</note>
+        <target>Edytuj stronę: %meta_title%</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="5aa00a736e77bff80d8a530b0522803d" approved="yes">
+      <trans-unit id="5aa00a736e77bff80d8a530b0522803d">
         <source>Category: %category%</source>
-        <target state="final">Kategoria: %category%</target>
-        <note>Line: 201</note>
+        <target>Kategoria: %category%</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCmsController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="897b3f9a5dc0ebb8ab90e033e7ce61f3" approved="yes">
+      <trans-unit id="897b3f9a5dc0ebb8ab90e033e7ce61f3">
         <source>Page Category</source>
-        <target state="final">Kategoria strony</target>
-        <note>Line: 166</note>
+        <target>Kategoria strony</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="cc4fbd30d676ea2f9994b7063a8ada15" approved="yes">
+      <trans-unit id="cc4fbd30d676ea2f9994b7063a8ada15">
         <source>Pages in this category</source>
-        <target state="final">Strony w tej kategorii</target>
-        <note>Line: 310</note>
+        <target>Strony w tej kategorii</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminImagesController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="cc350a9d1eabece4f9299f7bb51c3a9c" approved="yes">
+      <trans-unit id="cc350a9d1eabece4f9299f7bb51c3a9c">
         <source>Images generation options</source>
-        <target state="final">Opcje generowania zdjęć</target>
-        <note>Line: 84</note>
+        <target>Opcje generowania zdjęć</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d0efb46cfd8b126482192a343e2142b4" approved="yes">
+      <trans-unit id="d0efb46cfd8b126482192a343e2142b4">
         <source>Image format</source>
-        <target state="final">Format obrazu</target>
-        <note>Line: 92</note>
+        <target>Format obrazu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="92deb9e729da3800aca668de3491f0c8" approved="yes">
+      <trans-unit id="92deb9e729da3800aca668de3491f0c8">
         <source>Use JPEG.</source>
-        <target state="final">Użyj JPEG.</target>
-        <note>Line: 96</note>
+        <target>Użyj JPEG.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="6178649941eae11401f8bd95d32ad690" approved="yes">
+      <trans-unit id="6178649941eae11401f8bd95d32ad690">
         <source>Use PNG only if the base image is in PNG format.</source>
-        <target state="final">Użyj PNG tylko jeżeli zdjęcie podstawowe jest w formacie PNG</target>
-        <note>Line: 96</note>
+        <target>Użyj PNG tylko jeżeli zdjęcie podstawowe jest w formacie PNG</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d40849d8da6fe69b751ebaa13595b34d" approved="yes">
+      <trans-unit id="d40849d8da6fe69b751ebaa13595b34d">
         <source>Use PNG for all images.</source>
-        <target state="final">Użyj PNG dla wszystkich zdjęć.</target>
-        <note>Line: 96</note>
+        <target>Użyj PNG dla wszystkich zdjęć.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="5a259e0a584d2d8f7de738689c91cb20" approved="yes">
+      <trans-unit id="5a259e0a584d2d8f7de738689c91cb20">
         <source>JPEG compression</source>
-        <target state="final">Kompresja JPEG</target>
-        <note>Line: 99</note>
+        <target>Kompresja JPEG</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="9c4936420e1471c2233cfbb40ce49319" approved="yes">
+      <trans-unit id="9c4936420e1471c2233cfbb40ce49319">
         <source>PNG compression</source>
-        <target state="final">Kompresja PNG</target>
-        <note>Line: 107</note>
+        <target>Kompresja PNG</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="2f0f4bfac8d0b89ceaf30a94f39f0d58" approved="yes">
+      <trans-unit id="2f0f4bfac8d0b89ceaf30a94f39f0d58">
         <source>Generate images based on one side of the source image</source>
-        <target state="final">Generuje obrazy na podstawie jednej strony obrazu źródłowego</target>
-        <note>Line: 115</note>
+        <target>Generuje obrazy na podstawie jednej strony obrazu źródłowego</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="fbd5c930381c5176afe9310becf39ee5" approved="yes">
+      <trans-unit id="fbd5c930381c5176afe9310becf39ee5">
         <source>Automatic (longest side)</source>
-        <target state="final">Automatyczny (dłuższy bok)</target>
-        <note>Line: 123</note>
+        <target>Automatyczny (dłuższy bok)</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="9cddfad226d0bc7a731c13fbec74aca6" approved="yes">
+      <trans-unit id="9cddfad226d0bc7a731c13fbec74aca6">
         <source>Maximum file size of product customization pictures</source>
-        <target state="final">Maksymalny rozmiar pliku zdjęć dostosowywania produktów</target>
-        <note>Line: 138</note>
+        <target>Maksymalny rozmiar pliku zdjęć dostosowywania produktów</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="4b3a6218bb3e3a7303e8a171a60fcf92" approved="yes">
+      <trans-unit id="4b3a6218bb3e3a7303e8a171a60fcf92">
         <source>bytes</source>
-        <target state="final">bajtów</target>
-        <note>Line: 144</note>
+        <target>bajtów</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="ff534cd9270ca999a39a50a6365ff52e" approved="yes">
+      <trans-unit id="ff534cd9270ca999a39a50a6365ff52e">
         <source>Product picture width</source>
-        <target state="final">Szerokość zdjęcia produktu</target>
-        <note>Line: 148</note>
+        <target>Szerokość zdjęcia produktu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d399848208da8b80a306af0fd62bb03f" approved="yes">
+      <trans-unit id="d399848208da8b80a306af0fd62bb03f">
         <source>pixels</source>
-        <target state="final">pikseli</target>
-        <note>Line: 223</note>
+        <target>pikseli</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="5891a406596216c63f7a1f8f7c6a81a8" approved="yes">
+      <trans-unit id="5891a406596216c63f7a1f8f7c6a81a8">
         <source>Product picture height</source>
-        <target state="final">Wysokość zdjęcia produktu</target>
-        <note>Line: 159</note>
+        <target>Wysokość zdjęcia produktu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="ace52125644d273380446071bcd6d5fb" approved="yes">
+      <trans-unit id="ace52125644d273380446071bcd6d5fb">
         <source>Generate high resolution images</source>
-        <target state="final">Generowanie obrazów o wysokiej rozdzielczości</target>
-        <note>Line: 171</note>
+        <target>Generowanie obrazów o wysokiej rozdzielczości</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="b08ea6a4f29e76c9d843856917642409" approved="yes">
+      <trans-unit id="b08ea6a4f29e76c9d843856917642409">
         <source>Use the legacy image filesystem</source>
-        <target state="final">Użyj dziedziczonego systemu plików zdjęć</target>
-        <note>Line: 185</note>
+        <target>Użyj dziedziczonego systemu plików zdjęć</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="2dd1148046499f9c2422ce1045a4accf" approved="yes">
+      <trans-unit id="2dd1148046499f9c2422ce1045a4accf">
         <source>Image type</source>
-        <target state="final">Typ obrazu</target>
-        <note>Line: 197</note>
+        <target>Typ obrazu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="404dede45594c16ad5592b1091cc7ba8" approved="yes">
+      <trans-unit id="404dede45594c16ad5592b1091cc7ba8">
         <source>Name for the image type</source>
-        <target state="final">Nazwa dla typu obrazu</target>
-        <note>Line: 203</note>
+        <target>Nazwa dla typu obrazu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d1e9d1892046943ae96e613646fc0381" approved="yes">
+      <trans-unit id="d1e9d1892046943ae96e613646fc0381">
         <source>Add new image type</source>
-        <target state="final">Dodaj nowy typ zdjęcia</target>
-        <note>Line: 703</note>
+        <target>Dodaj nowy typ zdjęcia</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminModulesPositionsController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="700e2c3b7b442c597c781eac801408b6" approved="yes">
+      <trans-unit id="700e2c3b7b442c597c781eac801408b6">
         <source>___________ CUSTOM ___________</source>
-        <target state="final">___________ WŁASNY ___________</target>
-        <note>Line: 446</note>
+        <target>___________ WŁASNY ___________</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="6957667301f05bce7e2c0b5cd8567df5" approved="yes">
+      <trans-unit id="6957667301f05bce7e2c0b5cd8567df5">
         <source>____________ CORE ____________</source>
-        <target state="final">____________ GŁÓWNY ____________</target>
-        <note>Line: 458</note>
+        <target>____________ GŁÓWNY ____________</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="1cc06efffbc5252916c871f45098a50f" approved="yes">
+      <trans-unit id="1cc06efffbc5252916c871f45098a50f">
         <source>Admin modules controller</source>
-        <target state="final">Sterownik modułu Admin</target>
-        <note>Line: 464</note>
+        <target>Sterownik modułu Admin</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="2f75fd5bb638eb1353d6941aac58700e" approved="yes">
+      <trans-unit id="2f75fd5bb638eb1353d6941aac58700e">
         <source>Front modules controller</source>
-        <target state="final">Ustawianie modułów na stronie frotowej</target>
-        <note>Line: 464</note>
+        <target>Ustawianie modułów na stronie frotowej</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminShopController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="453aceb005ceaf54a47da15fee8b2a26" approved="yes">
+      <trans-unit id="453aceb005ceaf54a47da15fee8b2a26">
         <source>Pages</source>
-        <target state="final">Strony</target>
-        <note>Line: 532</note>
+        <target>Strony</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminThemesController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="b5c941eace89787ab475237451189eac" approved="yes">
+      <trans-unit id="b5c941eace89787ab475237451189eac">
         <source>Import theme</source>
-        <target state="final">Importuj szablon</target>
-        <note>Line: 172</note>
+        <target>Importuj szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="f5ad3d3e217e4b7ea1729eb997dfbe1e" approved="yes">
+      <trans-unit id="f5ad3d3e217e4b7ea1729eb997dfbe1e">
         <source>Your current theme</source>
-        <target state="final">Twój obecny szablon</target>
-        <note>Line: 405</note>
+        <target>Twój obecny szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="410901e83305e49595778896745950a9" approved="yes">
+      <trans-unit id="410901e83305e49595778896745950a9">
         <source><![CDATA[Invoice & Email Logos]]></source>
-        <target state="final"><![CDATA[Logo na fakturze i w mailu]]></target>
-        <note>Line: 409</note>
+        <target>Logo na fakturze i w mailu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="90dafb1cce6579655041476ab07fab90" approved="yes">
+      <trans-unit id="90dafb1cce6579655041476ab07fab90">
         <source>Favicons</source>
-        <target state="final">Ikony</target>
-        <note>Line: 410</note>
+        <target>Ikony</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="3388a09e80639f10038e6725fb32f444" approved="yes">
+      <trans-unit id="3388a09e80639f10038e6725fb32f444">
         <source>Select a theme for the "%name%" shop</source>
-        <target state="final">Wybierz szablon dla sklepu "%name%"</target>
-        <note>Line: 508</note>
+        <target>Wybierz szablon dla sklepu "%name%"</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="8d5cc12b0e7ecbe4e624baa345323035" approved="yes">
+      <trans-unit id="8d5cc12b0e7ecbe4e624baa345323035">
         <source>Theme appearance</source>
-        <target state="final">Wygląd szablonu</target>
-        <note>Line: 529</note>
+        <target>Wygląd szablonu</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/Core/Grid/Definition/Factory/CmsPageDefinitionFactory.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="1f6162e1430a8d5020bf4c20dc02499f" approved="yes">
+      <trans-unit id="1f6162e1430a8d5020bf4c20dc02499f">
         <source>Pages in category "%name%"</source>
-        <target state="final">Strony w kategorii "%name%"</target>
-        <note>Line: 121</note>
+        <target>Strony w kategorii "%name%"</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Controller/Admin/Improve/Design/MailThemeController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="cca370c1880917b42e0ca0f484afb715" approved="yes">
+      <trans-unit id="cca370c1880917b42e0ca0f484afb715">
         <source>Preview Theme %s</source>
-        <target state="final">Podgląd szablonu %s</target>
-        <note>Line: 249</note>
+        <target>Podgląd szablonu %s</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="7accead9f41b1968f1957961177b1ed7" approved="yes">
+      <trans-unit id="7accead9f41b1968f1957961177b1ed7">
         <source>Test email %template%</source>
-        <target state="final">Testowy e-mail %template%</target>
-        <note>Line: 319</note>
+        <target>Testowy e-mail %template%</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Form/Admin/Improve/Design/Pages/CmsPageCategoryType.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="52b68aaa602d202c340d9e4e9157f276" approved="yes">
+      <trans-unit id="52b68aaa602d202c340d9e4e9157f276">
         <source>Parent category</source>
-        <target state="final">Kategoria nadrzędna</target>
-        <note>Line: 113</note>
+        <target>Kategoria nadrzędna</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Form/Admin/Improve/Design/Pages/CmsPageType.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="21f93401134586a6c481422bf01fccfd" approved="yes">
+      <trans-unit id="21f93401134586a6c481422bf01fccfd">
         <source>Only letters and the hyphen (-) character are allowed.</source>
-        <target state="final">Tylko litery i znak myślnika (-) są znakami dozwolonymi.</target>
-        <note>Line: 221</note>
+        <target>Tylko litery i znak myślnika (-) są znakami dozwolonymi.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="45b1bce0ceb1e155fc99d59a21761b9e" approved="yes">
+      <trans-unit id="45b1bce0ceb1e155fc99d59a21761b9e">
         <source>Page content</source>
-        <target state="final">Zawartość strony</target>
-        <note>Line: 254</note>
+        <target>Zawartość strony</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="ce1e51212c9df52777620dc9de246da0" approved="yes">
+      <trans-unit id="ce1e51212c9df52777620dc9de246da0">
         <source>Indexation by search engines</source>
-        <target state="final">Indeksacja w wyszukiwarkach</target>
-        <note>Line: 269</note>
+        <target>Indeksacja w wyszukiwarkach</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="79e48ca19eefe7806fbaf27df903e8d5" approved="yes">
+      <trans-unit id="79e48ca19eefe7806fbaf27df903e8d5">
         <source>Page category</source>
-        <target state="final">Kategoria strony</target>
-        <note>Line: 94</note>
+        <target>Kategoria strony</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Form/Admin/Improve/Design/Theme/ImportThemeType.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="6966bbbcdeb44c019201ede70e7b74b8" approved="yes">
+      <trans-unit id="6966bbbcdeb44c019201ede70e7b74b8">
         <source>Zip file</source>
-        <target state="final">Plik ZIP</target>
-        <note>Line: 69</note>
+        <target>Plik ZIP</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="a33388a338ee2b199d66112369279558" approved="yes">
+      <trans-unit id="a33388a338ee2b199d66112369279558">
         <source>Archive URL</source>
-        <target state="final">Adres URL archiwum</target>
-        <note>Line: 81</note>
+        <target>Adres URL archiwum</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="a5a23094873852f0c0a9e55be4f1cf1d" approved="yes">
+      <trans-unit id="a5a23094873852f0c0a9e55be4f1cf1d">
         <source>Select the archive</source>
-        <target state="final">Wybierz archiwum</target>
-        <note>Line: 89</note>
+        <target>Wybierz archiwum</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Cms/Blocks/category_form.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="789ca3cc9e29e7ef767619e13c6b2f9e" approved="yes">
+      <trans-unit id="789ca3cc9e29e7ef767619e13c6b2f9e">
         <source>CMS Category</source>
-        <target state="final">Kategoria CMS</target>
-        <note>Line: 33</note>
+        <target>Kategoria CMS</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/configuration_form.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="d52c442675e27baf9d7c5a19d6ef93fa" approved="yes">
+      <trans-unit id="d52c442675e27baf9d7c5a19d6ef93fa">
         <source>Select your default email theme</source>
-        <target state="final">Wybierz swój domyśny szablon maila</target>
-        <note>Line: 41</note>
+        <target>Wybierz swój domyśny szablon maila</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/generate_mails_form.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="a0a17caf8de192bd85662445714f0adc" approved="yes">
+      <trans-unit id="a0a17caf8de192bd85662445714f0adc">
         <source>Generate emails</source>
-        <target state="final">Generuj e-maile</target>
-        <note>Line: 33</note>
+        <target>Generuj e-maile</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="98d77d08b65418c4375c4947921ce44c" approved="yes">
+      <trans-unit id="98d77d08b65418c4375c4947921ce44c">
         <source>Select your email theme</source>
-        <target state="final">Wybierz szablon maila</target>
-        <note>Line: 41</note>
+        <target>Wybierz szablon maila</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d8605aca26dca73f3e67726f7301a165" approved="yes">
+      <trans-unit id="d8605aca26dca73f3e67726f7301a165">
         <source>Select the theme you want to overwrite</source>
-        <target state="final">Wybierz motyw, który chcesz zastąpić</target>
-        <note>Line: 61</note>
+        <target>Wybierz motyw, który chcesz zastąpić</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="b445b07a4ce0e996acaf7ceb6a2547c3" approved="yes">
+      <trans-unit id="b445b07a4ce0e996acaf7ceb6a2547c3">
         <source>Overwrite templates</source>
-        <target state="final">Zastąp szablony</target>
-        <note>Line: 75</note>
+        <target>Zastąp szablony</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/list_mail_theme_layouts.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="594092807cc252032c22d39dacab4d95" approved="yes">
+      <trans-unit id="594092807cc252032c22d39dacab4d95">
         <source>List %theme% layouts</source>
-        <target state="final">Wyświetl układy %theme%</target>
-        <note>Line: 31</note>
+        <target>Wyświetl układy %theme%</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="bfa4f8af8165a84b7d7b2e01d8dfc870" approved="yes">
+      <trans-unit id="bfa4f8af8165a84b7d7b2e01d8dfc870">
         <source>Raw HTML</source>
-        <target state="final">Surowy HTML</target>
-        <note>Line: 90</note>
+        <target>Surowy HTML</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675" approved="yes">
+      <trans-unit id="9dffbf69ffba8bc38bc4e01abf4b1675">
         <source>Text</source>
-        <target state="final">Tekst</target>
-        <note>Line: 94</note>
+        <target>Tekst</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/MailTheme/Blocks/list_mail_themes.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="d28bbf5382a9e7e12a596e5e7f2d04ca" approved="yes">
+      <trans-unit id="d28bbf5382a9e7e12a596e5e7f2d04ca">
         <source>Email themes</source>
-        <target state="final">Szablony maili</target>
-        <note>Line: 31</note>
+        <target>Szablony maili</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/Partials/theme_card.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="837a54ae4874c4501c804173cd3c0fdf" approved="yes">
+      <trans-unit id="837a54ae4874c4501c804173cd3c0fdf">
         <source>Designed by %s</source>
-        <target state="final">Zaprojektowano przez %s</target>
-        <note>Line: 49</note>
+        <target>Zaprojektowano przez %s</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/delete_theme_modal.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="a20cd66c6c13302711252a1b5830f17c" approved="yes">
+      <trans-unit id="a20cd66c6c13302711252a1b5830f17c">
         <source>Delete this theme?</source>
-        <target state="final">Usunąć ten szablon?</target>
-        <note>Line: 31</note>
+        <target>Usunąć ten szablon?</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/layouts_configuration.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="8ef656f84513928ea1b0c2f1735b62e9" approved="yes">
+      <trans-unit id="8ef656f84513928ea1b0c2f1735b62e9">
         <source>Configure your page layouts</source>
-        <target state="final">Skonfiguruj swoje układy stron</target>
-        <note>Line: 34</note>
+        <target>Skonfiguruj swoje układy stron</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="4459ae4e873177642b30e9fc8b821d2f" approved="yes">
+      <trans-unit id="4459ae4e873177642b30e9fc8b821d2f">
         <source>Each page can use a different layout, choose it among the layouts bundled in your theme.</source>
-        <target state="final">Każda strona może mieć inny układ, wybierz go wśród układów zawartych w Twoim szablonie.</target>
-        <note>Line: 35</note>
+        <target>Każda strona może mieć inny układ, wybierz go wśród układów zawartych w Twoim szablonie.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="f0dbca7d922e4e759a1e3b512b9be852" approved="yes">
+      <trans-unit id="f0dbca7d922e4e759a1e3b512b9be852">
         <source>Choose layouts</source>
-        <target state="final">Wybierz układy</target>
-        <note>Line: 42</note>
+        <target>Wybierz układy</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="21e2bb42873eddcb9b476b8eafbe0c18" approved="yes">
+      <trans-unit id="21e2bb42873eddcb9b476b8eafbe0c18">
         <source>Reset to defaults</source>
-        <target state="final">Przywróć ustawienia domyślne</target>
-        <note>Line: 52</note>
+        <target>Przywróć ustawienia domyślne</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/logo_configuration.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="49824ed511fd64f33f2f8a1818ee8fe1" approved="yes">
+      <trans-unit id="49824ed511fd64f33f2f8a1818ee8fe1">
         <source>Header logo</source>
-        <target state="final">Logo nagłówka</target>
-        <note>Line: 42</note>
+        <target>Logo nagłówka</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="358b0205fd07c94c16a82d8278bc5b76" approved="yes">
+      <trans-unit id="358b0205fd07c94c16a82d8278bc5b76">
         <source>Mail logo</source>
-        <target state="final">Logo w mailu</target>
-        <note>Line: 96</note>
+        <target>Logo w mailu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d84613cd39906ab9161e1ad513f8947b" approved="yes">
+      <trans-unit id="d84613cd39906ab9161e1ad513f8947b">
         <source>Invoice logo</source>
-        <target state="final">Logo na fakturze</target>
-        <note>Line: 113</note>
+        <target>Logo na fakturze</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="49e95301d8fcdbc23f623e0f2d1ed1e6" approved="yes">
+      <trans-unit id="49e95301d8fcdbc23f623e0f2d1ed1e6">
         <source>Favicon</source>
-        <target state="final">Favicon</target>
-        <note>Line: 127</note>
+        <target>Favicon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="7a14350e716ea89067904804ee3e1f0c" approved="yes">
+      <trans-unit id="7a14350e716ea89067904804ee3e1f0c">
         <source>Favicon image</source>
-        <target state="final">Obrazek favicon</target>
-        <note>Line: 139</note>
+        <target>Obrazek favicon</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/rtl_configuration.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="d1c54fe762697b168dee820490655563" approved="yes">
+      <trans-unit id="d1c54fe762697b168dee820490655563">
         <source>Adaptation to Right-to-Left languages</source>
-        <target state="final">Dostosowanie do języków od prawej do lewej</target>
-        <note>Line: 31</note>
+        <target>Dostosowanie do języków od prawej do lewej</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="8ed22009aa8884b512b3e3a85d1aeb87" approved="yes">
+      <trans-unit id="8ed22009aa8884b512b3e3a85d1aeb87">
         <source>Theme to adapt</source>
-        <target state="final">Szablon do dostosowania</target>
-        <note>Line: 42</note>
+        <target>Szablon do dostosowania</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="fb3f98de7e392f98c02ba257e6c46f9a" approved="yes">
+      <trans-unit id="fb3f98de7e392f98c02ba257e6c46f9a">
         <source>Generate RTL stylesheet</source>
-        <target state="final">Wygeneruj arkusz stylów RTL</target>
-        <note>Line: 46</note>
+        <target>Wygeneruj arkusz stylów RTL</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/Blocks/use_theme_modal.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="ca4dc1a851769ef30c841b36cd18648a" approved="yes">
+      <trans-unit id="ca4dc1a851769ef30c841b36cd18648a">
         <source>Use this theme?</source>
-        <target state="final">Użyć tego szablonu?</target>
-        <note>Line: 31</note>
+        <target>Użyć tego szablonu?</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/import.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="7961c4434751797a383d52d647e044d6" approved="yes">
+      <trans-unit id="7961c4434751797a383d52d647e044d6">
         <source>Import from your computer</source>
-        <target state="final">Importuj ze swojego komputera</target>
-        <note>Line: 53</note>
+        <target>Importuj ze swojego komputera</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="dec0faa6eb19bd9120d12c5a876bd1cf" approved="yes">
+      <trans-unit id="dec0faa6eb19bd9120d12c5a876bd1cf">
         <source>Import from the web</source>
-        <target state="final">Importuj z sieci Web</target>
-        <note>Line: 75</note>
+        <target>Importuj z sieci Web</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="cd8d9cc19984ccf9d314eee5eebfc2cc" approved="yes">
+      <trans-unit id="cd8d9cc19984ccf9d314eee5eebfc2cc">
         <source>Import from FTP</source>
-        <target state="final">Importuj z FTP</target>
-        <note>Line: 97</note>
+        <target>Importuj z FTP</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="36866999eeb441da24edc6fd075e1765" approved="yes">
+      <trans-unit id="36866999eeb441da24edc6fd075e1765">
         <source>Add new theme</source>
-        <target state="final">Dodaj Szablon</target>
-        <note>Line: 32</note>
+        <target>Dodaj Szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="3ff63fb80ae3bd04b6550282d39f674f" approved="yes">
+      <trans-unit id="3ff63fb80ae3bd04b6550282d39f674f">
         <source>Export current theme</source>
-        <target state="final">Eksportuj obecny szablon</target>
-        <note>Line: 37</note>
+        <target>Eksportuj obecny szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="859a82ffb385f9227c656960996025eb" approved="yes">
+      <trans-unit id="859a82ffb385f9227c656960996025eb">
         <source>Visit the theme catalog</source>
-        <target state="final">Odwiedź katalog szablonów</target>
-        <note>Line: 153</note>
+        <target>Odwiedź katalog szablonów</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="d721757161f7f70c5b0949fdb6ec2c30" approved="yes">
+      <trans-unit id="d721757161f7f70c5b0949fdb6ec2c30">
         <source>Theme</source>
-        <target state="final">Szablon</target>
-        <note>Line: 28</note>
+        <target>Szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="6b8e9498b52135e7f6cee757294a6079" approved="yes">
+      <trans-unit id="6b8e9498b52135e7f6cee757294a6079">
         <source>My current theme</source>
-        <target state="final">Mój obecny szablon</target>
-        <note>Line: 99</note>
+        <target>Mój obecny szablon</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="b6ba229b668e5a7b6700e4d275683084" approved="yes">
+      <trans-unit id="b6ba229b668e5a7b6700e4d275683084">
         <source>Use this theme</source>
-        <target state="final">Użyj tego szablonu</target>
-        <note>Line: 123</note>
+        <target>Użyj tego szablonu</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="6fe78057f585de51da0f61d514143fe1" approved="yes">
+      <trans-unit id="6fe78057f585de51da0f61d514143fe1">
         <source>Explore more than a thousand themes</source>
-        <target state="final">Poznaj ponad tysiąc szablonów</target>
-        <note>Line: 148</note>
+        <target>Poznaj ponad tysiąc szablonów</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="10d79e2800631feee6411615a72eb79e" approved="yes">
+      <trans-unit id="10d79e2800631feee6411615a72eb79e">
         <source>My theme for %name% shop</source>
-        <target state="final">Mój motyw do sklepu %name%</target>
-        <note>Line: 82</note>
+        <target>Mój motyw do sklepu %name%</target>
+        <note>Line: </note>
       </trans-unit>
     </body>
   </file>

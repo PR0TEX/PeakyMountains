@@ -1,114 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file original="admin-dev/themes/default/template/header.tpl" source-language="en" target-language="pl" datatype="plaintext">
+  <file original="admin-dev" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
     <body>
-      <trans-unit id="2fc6204d2ca7e856d9e4844d2786f053" approved="yes">
+      <trans-unit id="2fc6204d2ca7e856d9e4844d2786f053">
         <source>This field will be modified for all your shops.</source>
-        <target state="final">To pole będzie zmodyfikowane dla wszystkich Twoich sklepów.</target>
-        <note>Line: 53</note>
+        <target>To pole będzie zmodyfikowane dla wszystkich Twoich sklepów.</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="7ac170f2b47dbf7d4c5cd38449093c2b" approved="yes">
+      <trans-unit id="7ac170f2b47dbf7d4c5cd38449093c2b">
         <source>This field will be modified for all shops in this shop group:</source>
-        <target state="final">To pole będzie zmodyfikowane dla wszystkich sklepów w tej samej grupie:</target>
-        <note>Line: 55</note>
+        <target>To pole będzie zmodyfikowane dla wszystkich sklepów w tej samej grupie:</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="fe0ae15c8f93a5335f0991accadd13ca" approved="yes">
+      <trans-unit id="fe0ae15c8f93a5335f0991accadd13ca">
         <source>This field will be modified for this shop:</source>
-        <target state="final">To pole będzie zmodyfikowane dla tego sklepu:</target>
-        <note>Line: 57</note>
+        <target>To pole będzie zmodyfikowane dla tego sklepu:</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCarriersController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="d3b206d196cd6be3a2764c1fb90b200f" approved="yes">
+      <trans-unit id="d3b206d196cd6be3a2764c1fb90b200f">
         <source>Delete selected</source>
-        <target state="final">Usuń zaznaczone</target>
-        <note>Line: 55</note>
+        <target>Usuń zaznaczone</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="e25f0ecd41211b01c83e5fec41df4fe7" approved="yes">
+      <trans-unit id="e25f0ecd41211b01c83e5fec41df4fe7">
         <source>Delete selected items?</source>
-        <target state="final">Usunąć wybrane pozycje?</target>
-        <note>Line: 56</note>
+        <target>Usunąć wybrane pozycje?</target>
+        <note>Line: </note>
       </trans-unit>
-      <trans-unit id="1412292b09d3cd39f32549afb1f5f102" approved="yes">
+      <trans-unit id="1412292b09d3cd39f32549afb1f5f102">
         <source>Delete selected item?</source>
-        <target state="final">Usunąć wybrany przedmiot?</target>
-        <note>Line: 709</note>
+        <target>Usunąć wybrany przedmiot?</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminCustomersController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="b3ebc4fbc081856600b6b9ecbb0a99fb" approved="yes">
+      <trans-unit id="b3ebc4fbc081856600b6b9ecbb0a99fb">
         <source>Delete the selected item?</source>
-        <target state="final">Usunąć wybrany przedmiot?</target>
-        <note>Line: 1048</note>
+        <target>Usunąć wybrany przedmiot?</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="controllers/admin/AdminQuickAccessesController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="3e053943605d9e4bf7dd7588ea19e9d2" approved="yes">
+      <trans-unit id="3e053943605d9e4bf7dd7588ea19e9d2">
         <source>Forbidden characters:</source>
-        <target state="final">Zabronione znaki:</target>
-        <note>Line: 90</note>
+        <target>Zabronione znaki:</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="modules/statsbestmanufacturers/statsbestmanufacturers.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="58ef962a87e6fbbea6027c17a954a18d" approved="yes">
+      <trans-unit id="58ef962a87e6fbbea6027c17a954a18d">
         <source>Empty recordset returned.</source>
-        <target state="final">Zwrócono pusty zbiór danych.</target>
-        <note>Line: 53</note>
+        <target>Zwrócono pusty zbiór danych.</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="modules/statsbestsuppliers/statsbestsuppliers.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="4f29d8c727dcf2022ac241cb96c31083" approved="yes">
+      <trans-unit id="4f29d8c727dcf2022ac241cb96c31083">
         <source>Empty recordset returned</source>
-        <target state="final">Zwrócono pusty zbiór danych</target>
-        <note>Line: 53</note>
+        <target>Zwrócono pusty zbiór danych</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Controller/Admin/Improve/International/LanguageController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Controller/Admin/Sell/Catalog/Product/ProductController.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Form/Admin/Sell/Customer/CustomerType.php" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="f6916f4f1a268d4d0014ce47a2dfc3e4" approved="yes">
+      <trans-unit id="233a1ce8ca8efc5c0f45bf2df346812a">
+        <source>Note that this page is available in all shops context only, this is why your context has just switched.</source>
+        <target>Zauważ, że ta strona jest dostępna tylko w kontekście wszystkich sklepów, dlatego Twój kontekst właśnie się przełączył.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2ca177b474e501c55d3825873c2addfe">
+        <source>Note that this feature is available in all shops context only. It will be added to all your stores.</source>
+        <target>Zauważ, że ta funkcja jest dostępna tylko w kontekście wszystkich sklepów. Zostanie ona dodana do wszystkich Twoich sklepów.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f5f44b1ee53a0290d59d54a5f0b95f59">
+        <source>This page is not yet compatible with the multistore feature. To access the page, please [1]disable the multistore feature[/1].</source>
+        <target>Ta strona nie jest jeszcze kompatybilna z funkcją wielu sklepów. Aby uzyskać dostęp do strony, proszę [1]wyłączyć funkcję wielu sklepów[/1].</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f6916f4f1a268d4d0014ce47a2dfc3e4">
         <source>Password should be at least %length% characters long.</source>
-        <target state="final">Hasło powinno składać się przynajmniej z %length% znaków.</target>
-        <note>Line: 186</note>
+        <target>Hasło powinno składać się przynajmniej z %length% znaków.</target>
+        <note>Line: </note>
       </trans-unit>
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Improve/Payment/Preferences/payment_preferences.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      
-    </body>
-  </file>
-  <file original="src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig" source-language="en" target-language="pl" datatype="plaintext">
-    <body>
-      <trans-unit id="6252c0f2c2ed83b7b06dfca86d4650bb" approved="yes">
+      <trans-unit id="178a5f69a18bd94dc2bbafbd074be1f2">
+        <source>Note that this page is available in a single shop context only. Switch context to work on it.</source>
+        <target>Zwróć uwagę, że ta strona jest dostępna tylko w kontekście pojedynczego sklepu. Przełącz kontekst, aby móc na niej pracować.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6252c0f2c2ed83b7b06dfca86d4650bb">
         <source>Invalid characters:</source>
-        <target state="final">Nieprawidłowe znaki:</target>
-        <note>Line: 160</note>
+        <target>Nieprawidłowe znaki:</target>
+        <note>Line: </note>
       </trans-unit>
     </body>
   </file>
