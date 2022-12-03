@@ -8,3 +8,9 @@ Exchange files:
 
 Run docker-compose up \
 START PRAYING TO START PRESTASHOP WITHIN 30 MINUTES
+
+Requirements for scrapper \
+Use command pip install -r path/to/requirements.txt
+
+
+
