@@ -101,8 +101,3 @@ def scrap_categories():
         }
         elements.append(element)
     save_data_to_csv(elements, csv_filename)
-
-
-scrap_products_depending_on_category('ona')
-scrap_categories_with_subcategories()
-scrap_categories()
