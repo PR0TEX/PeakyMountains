@@ -1,3 +1,4 @@
-beautifulsoup4 @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_croot-15cbtalq/beautifulsoup4_1650462161715/work
+beautifulsoup4
 pandas==1.4.2
-requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
+requests
+lxml
