@@ -30,7 +30,7 @@ services:
       PS_DOMAIN: ${PS_DOMAIN}
       PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-install-dev}
       PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
-      #PS_ENABLE_SSL: ${PS_ENABLE_SSL}
+      PS_ENABLE_SSL: ${PS_ENABLE_SSL}
     command: ["/tmp/wait-for-it.sh", "--timeout=60", "--strict", "mysql:3306", "--", "/tmp/docker_run_git.sh"]
     ports:
       - 80:80
@@ -39,5 +39,3 @@ services:
       - ./:/var/www/html/:delegated
       - vendor:/var/www/html/vendor
       - var:/var/www/html/var
-      #- ./ssl/certs:/etc/apache2/ssl
-      #- ./ssl/conf:/etc/apache2/sites-available
