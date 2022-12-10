@@ -24,6 +24,8 @@ services:
       PS_DEV_MODE: 0
       DISABLE_MAKE: ${DISABLE_MAKE:-1} #Disable makefile
       PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
+      PS_ERASE_DB: ${PS_ERASE_DB}
+      PS_DEMO_MODE: ${PS_DEMO_MODE}
       DB_PASSWD: ${DB_PASSWD:-prestashop}
       DB_NAME: ${DB_NAME:-prestashop}
       DB_SERVER: ${DB_SERVER:-mysql}
