@@ -14,5 +14,6 @@ def save_data_to_csv(data, filename):
     if not os.path.exists(output_directory):
         os.mkdir(output_directory)
 
-    df.to_csv("./data/" + filename)
+    df.to_csv("./data/" + filename, header=False, index=False, sep=";")
     print("Data saved to file "+filename)
+
