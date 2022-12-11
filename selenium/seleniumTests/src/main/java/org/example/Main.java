@@ -75,19 +75,10 @@ public class Main {
     }
 
     private static void buyingTest(WebDriver webDriver) throws InterruptedException {
-        //get tab list
-        List<WebElement> tabs = webDriver.findElement(By.cssSelector("ul[class='top-menu']")).findElements(By.cssSelector("a[class='dropdown-item']"));
-        int tabIndex = (tabs.size() >= 2)? 1 : 0;
-        //go to tab
-        tabs.get(tabIndex).click();
-        //go to first category
-        webDriver.findElement(By.cssSelector("ul[class='subcategories-list']")).findElements(By.cssSelector("a[class='subcategory-name']")).get(0).click();
-        buyElementsFromCategory(webDriver);
-        //go back to tab
-        getBackInLinks(webDriver);
-        //go to second category
-        webDriver.findElement(By.cssSelector("ul[class='subcategories-list']")).findElements(By.cssSelector("a[class='subcategory-name']")).get(1).click();
-        buyElementsFromCategory(webDriver);
+        Thread.sleep(1000);
+        int limitOfProductToCart = 5;
+        buyElementsFromCategory(webDriver, 0, limitOfProductToCart);
+        buyElementsFromCategory(webDriver, 1, limitOfProductToCart);
         //go into cart
         webDriver.findElement(By.id("_desktop_cart")).findElement(By.tagName("a")).click();
         //remove first product from cart
@@ -95,23 +86,22 @@ public class Main {
         goThroughCart(webDriver);
     }
 
-    private static void buyElementsFromCategory(WebDriver webDriver) throws InterruptedException {
-        List<WebElement> products = webDriver.findElement(By.id("js-product-list")).findElements(By.className("product-thumbnail"));
+    private static void buyElementsFromCategory(WebDriver webDriver, int categoryNumber, int limitOfProductToCart) throws InterruptedException {
+        //get categories list
+        List<WebElement> categories = webDriver.findElement(By.cssSelector("ul[id='top-menu']")).findElements(By.cssSelector("a[data-depth='0']"));
+        //go to tab
+        categories.get(categoryNumber).click();
         //go into product
-        for (int i = 0; i < products.size() && i < 10; i++) {
-            //System.out.println(products.get(i));
-            webDriver.findElement(By.id("js-product-list")).findElements(By.className("product-thumbnail")).get(i).click();
-            //products.get(i).click();
+        for (int i = 0; limitOfProductToCart > 0; limitOfProductToCart--, i++) {
+            //go to product
+            webDriver.findElement(By.id("js-product-list")).findElements(By.className("product-description")).get(i).findElement(By.tagName("a")).click();
             //add product to cart
             increaseQuantityAndAddElementToCart(webDriver, i);
-            //get back to product list
-            getBackInLinks(webDriver);
+            //get back to product list -> get categories list
+            categories = webDriver.findElement(By.cssSelector("ul[id='top-menu']")).findElements(By.cssSelector("a[data-depth='0']"));
+            //go to category
+            categories.get(categoryNumber).click();
         }
-    }
-
-    private static void getBackInLinks(WebDriver webDriver) {
-        List<WebElement> historyList = webDriver.findElement(By.tagName("ol")).findElements(By.tagName("a"));
-        historyList.get(historyList.size() - 1).click();
     }
 
     private static void addElementToCart(WebDriver webDriver) throws InterruptedException {
@@ -127,7 +117,7 @@ public class Main {
 
     private static void increaseQuantityAndAddElementToCart(WebDriver webDriver, int quantity) throws InterruptedException {
         //increase quantity
-        for(int i = 0; i < quantity; i++) {
+        for(int i = 0; i < quantity % 3; i++) {
             webDriver.findElement(By.className("touchspin-up")).click();
         }
         List<WebElement> sectionsCustomizations = webDriver.findElements(By.cssSelector("section[class='product-customization js-product-customization']"));
