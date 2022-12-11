@@ -75,9 +75,10 @@ def get_description(soup):
     for paragraph in description_paragraphs:
         description += paragraph.text + "\n"   
     if description_div.h2 is not None:
-        description += "\n" + description_div.h2.text + "\n"    
-        for feature in description_div.ul.find_all('li'):
-            description += "\t" + feature.text + "\n"
+        description += "\n" + description_div.h2.text + "\n"  
+        if description_div.ul is not None:  
+            for feature in description_div.ul.find_all('li'):
+                description += "\t" + feature.text + "\n"
         
     return description
 
