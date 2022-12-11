@@ -4,43 +4,114 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
 
 public class Main {
+
+    private static final String chromedriverPath = "I:\\Instalki\\selenium_jars_and_drivers\\chromedriver/chromedriver.exe";
+    private static final String baseUrl = "http://localhost:8001/pl/";
+    private static final boolean guestMode = true;
+    private static final String userMail = "jan.kowalski@gmail.com";
+
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "I:\\Instalki\\selenium_jars_and_drivers\\chromedriver/chromedriver.exe");
-        WebDriver webDriver = new ChromeDriver();
-
-        webDriver.manage().window().maximize();
+        System.setProperty("webdriver.chrome.driver", chromedriverPath);
+        ChromeOptions ops = new ChromeOptions();
+        ops.addArguments("--disable-notifications");
+        ops.addArguments("start-maximized");
+        WebDriver webDriver = new ChromeDriver(ops);
         //go to URL of presta on localhost
-        webDriver.get("http://localhost:8001/pl/");
-        Thread.sleep(10000);
-        //go to "clothes" tab (id=category-3)
-        webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/3-clothes']")).click();
-        //go to "Men" section
-        webDriver.findElement(By.linkText("Men")).click();
-        //go to product
-        webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/men/1-1-hummingbird-printed-t-shirt.html#/1-rozmiar-s/8-kolor-bialy'")).click();
-        addElementToCart(webDriver);
-        //continue shopping button
-        webDriver.findElement(By.className("cart-content-btn")).findElement(By.className("btn-secondary")).click();
-        //wait for element to hide
-        Thread.sleep(2000);
-        //hover "clothes" tab
-        hoverClothesTab(webDriver);
-        //go to women section
-        webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/5-women']")).click();
-        //go to product
-        webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/women/2-9-brown-bear-printed-sweater.html#/1-rozmiar-s'")).click();
-        //increase quantity
-        increaseQuantityAndAddElementToCart(webDriver);
-        //go to order realisation
-        webDriver.findElement(By.className("cart-content-btn")).findElement(By.className("btn-primary")).click();
-        goThroughCartAsGuest(webDriver);
+        webDriver.get(baseUrl);
+        buyingTest(webDriver);
+        checkStatus(webDriver);
+        webDriver.quit();
+    }
 
-        //webDriver.close();
+    private static void register(WebDriver webDriver) {
+        //click log-in button
+        webDriver.findElement(By.id("_desktop_user_info")).findElement(By.cssSelector("a[rel='nofollow']")).click();
+        //click register link
+        webDriver.findElement((By.cssSelector("a[href='" + baseUrl + "logowanie?create_account=1']"))).click();
+        fillPersonalData(webDriver);
+        webDriver.findElement(By.id("field-password")).sendKeys("prestashop_demo");
+        webDriver.findElement(By.id("field-birthday")).sendKeys("1970-05-31");
+        //continue
+        webDriver.findElement(By.cssSelector("button[data-link-action='save-customer']")).click();
+    }
+
+    private static void logIn(WebDriver webDriver) {
+        //click log-in button
+        webDriver.findElement(By.id("_desktop_user_info")).findElement(By.cssSelector("a[rel='nofollow']")).click();
+        //fill in the mail
+        webDriver.findElement(By.id("field-email")).clear();
+        webDriver.findElement(By.id("field-email")).sendKeys(userMail);
+        //fill in the password
+        webDriver.findElement(By.id("field-password")).clear();
+        webDriver.findElement(By.id("field-password")).sendKeys("prestashop_demo");
+        //click the button to continue
+        webDriver.findElement(By.id("submit-login")).click();
+    }
+
+    private static void checkStatus(WebDriver webDriver) {
+        //copy order number
+        String orderReference = webDriver.findElement(By.id("order-reference-value")).getText();
+        String orderNumber = orderReference.split(":")[1].trim();
+        //go into my account
+        webDriver.findElement(By.className("account")).click();
+        //go into history of orders
+        webDriver.findElement(By.id("history-link")).click();
+        //get status
+        WebElement tbody = webDriver.findElement(By.tagName("tbody"));
+        List<WebElement> ordersNumber = tbody.findElements(By.cssSelector("th[scope='row']"));
+        List<WebElement> ordersStatus = tbody.findElements(By.tagName("span"));
+        int index = 0;
+        for (int i = 0; i < ordersNumber.size(); i++) {
+            if (orderNumber.equals(ordersNumber.get(i).getText())) {
+                index = i;
+            }
+        }
+        System.out.println(ordersStatus.get(index).getText());
+    }
+
+    private static void buyingTest(WebDriver webDriver) throws InterruptedException {
+        //get tab list
+        List<WebElement> tabs = webDriver.findElement(By.cssSelector("ul[class='top-menu']")).findElements(By.cssSelector("a[class='dropdown-item']"));
+        int tabIndex = (tabs.size() >= 2)? 1 : 0;
+        //go to tab
+        tabs.get(tabIndex).click();
+        //go to first category
+        webDriver.findElement(By.cssSelector("ul[class='subcategories-list']")).findElements(By.cssSelector("a[class='subcategory-name']")).get(0).click();
+        buyElementsFromCategory(webDriver);
+        //go back to tab
+        getBackInLinks(webDriver);
+        //go to second category
+        webDriver.findElement(By.cssSelector("ul[class='subcategories-list']")).findElements(By.cssSelector("a[class='subcategory-name']")).get(1).click();
+        buyElementsFromCategory(webDriver);
+        //go into cart
+        webDriver.findElement(By.id("_desktop_cart")).findElement(By.tagName("a")).click();
+        //remove first product from cart
+        removeFromCart(webDriver);
+        goThroughCart(webDriver);
+    }
+
+    private static void buyElementsFromCategory(WebDriver webDriver) throws InterruptedException {
+        List<WebElement> products = webDriver.findElement(By.id("js-product-list")).findElements(By.className("product-thumbnail"));
+        //go into product
+        for (int i = 0; i < products.size() && i < 10; i++) {
+            //System.out.println(products.get(i));
+            webDriver.findElement(By.id("js-product-list")).findElements(By.className("product-thumbnail")).get(i).click();
+            //products.get(i).click();
+            //add product to cart
+            increaseQuantityAndAddElementToCart(webDriver, i);
+            //get back to product list
+            getBackInLinks(webDriver);
+        }
+    }
+
+    private static void getBackInLinks(WebDriver webDriver) {
+        List<WebElement> historyList = webDriver.findElement(By.tagName("ol")).findElements(By.tagName("a"));
+        historyList.get(historyList.size() - 1).click();
     }
 
     private static void addElementToCart(WebDriver webDriver) throws InterruptedException {
@@ -48,27 +119,44 @@ public class Main {
         webDriver.findElement(By.className("add-to-cart")).click();
         //wait for element to show
         Thread.sleep(2000);
+        //continue shopping button
+        webDriver.findElement(By.className("cart-content-btn")).findElement(By.className("btn-secondary")).click();
+        //wait for element to hide
+        Thread.sleep(2000);
     }
 
-    private static void increaseQuantityAndAddElementToCart(WebDriver webDriver) throws InterruptedException {
+    private static void increaseQuantityAndAddElementToCart(WebDriver webDriver, int quantity) throws InterruptedException {
         //increase quantity
-        webDriver.findElement(By.className("touchspin-up")).click();
+        for(int i = 0; i < quantity; i++) {
+            webDriver.findElement(By.className("touchspin-up")).click();
+        }
+        List<WebElement> sectionsCustomizations = webDriver.findElements(By.cssSelector("section[class='product-customization js-product-customization']"));
+        if (sectionsCustomizations.size() > 0) {
+            WebElement textarea = sectionsCustomizations.get(0).findElement(By.cssSelector("textarea[class='product-message']"));
+            textarea.clear();
+            textarea.sendKeys("BE PROJECT");
+            sectionsCustomizations.get(0).findElement(By.cssSelector("button[class='btn btn-primary float-xs-right']")).click();
+        }
         addElementToCart(webDriver);
     }
 
-    private static void hoverClothesTab(WebDriver webDriver) throws InterruptedException {
-        //hover "clothes" tab
-        WebElement clothesTab = webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/3-clothes']"));
-        Actions actions = new Actions(webDriver);
-        actions.moveToElement(clothesTab).perform();
-        Thread.sleep(1000);
+    private static void removeFromCart(WebDriver webDriver) {
+        webDriver.findElements(By.className("remove-from-cart")).get(0).click();
     }
 
-    private static void goThroughCartAsGuest(WebDriver webDriver) throws InterruptedException {
-        //go into cart
-        webDriver.findElement(By.cssSelector("a[href='http://localhost:8001/pl/zamówienie']")).click();
-        //fill in personal data
-        fillPersonalData(webDriver);
+    private static void goThroughCart(WebDriver webDriver) throws InterruptedException {
+        //place order
+        webDriver.findElement(By.className("cart-summary")).findElement(By.className("btn-primary")).click();
+        if (guestMode) {
+            //fill in personal data
+            fillPersonalData(webDriver);
+            //fill in password field
+            webDriver.findElement(By.id("field-password")).sendKeys("prestashop_demo");
+            //fill in birthdate field
+            webDriver.findElement(By.id("field-birthday")).sendKeys("1970-05-31");
+            //continue
+            webDriver.findElement(By.cssSelector("button[data-link-action='register-new-customer']")).click();
+        }
         //fill in address fields
         fillAddress(webDriver);
         //choose delivery option
@@ -85,12 +173,10 @@ public class Main {
         //input surname
         webDriver.findElement(By.id("field-lastname")).sendKeys("Kowalski");
         //email field-email
-        webDriver.findElement(By.id("field-email")).sendKeys("jan.kowalski@gmail.com");
+        webDriver.findElement(By.id("field-email")).sendKeys(userMail);
         //checkboxes
         webDriver.findElement(By.cssSelector("input[name='customer_privacy']")).click();
         webDriver.findElement(By.cssSelector("input[name='psgdpr']")).click();
-        //continue
-        webDriver.findElement(By.cssSelector("button[name='continue']")).click();
     }
 
     private static void fillAddress(WebDriver webDriver) {
@@ -107,7 +193,6 @@ public class Main {
     private static void chooseDeliveryOption(WebDriver webDriver) throws InterruptedException {
         //choose delivery option
         List<WebElement> deliveryOptions = webDriver.findElement(By.className("delivery-options")).findElements(By.className("js-delivery-option"));
-        System.out.println(deliveryOptions.size());
         deliveryOptions.get(0).click();
         Thread.sleep(1000);
         deliveryOptions.get(2).click();
