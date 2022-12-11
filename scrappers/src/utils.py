@@ -13,7 +13,8 @@ pronouns = {
     "Bieganie": "do biegania",
     "Rower": "do roweru",
     "Skitouring": "do skitouringu",
-    "Promocje": "z promocji"
+    "% Promocje": "z promocji",
+    "Outlet do -60%": "z outletu"
 }
 
 sizes = {
@@ -98,7 +99,7 @@ def get_product_url(title):
     
     return (base_url + item_endpoint).lower()
 
-def get_page_soup(url):
+def get_soup(url):
     site = requests.get(url).text
     soup = BeautifulSoup(site, 'lxml')
     return soup

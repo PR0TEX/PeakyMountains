@@ -12,39 +12,25 @@ def scrap_products_depending_on_category(page_category):
     
     while run:
         link_to_scrap = create_link_with_query_param(base_url, page_category, query_param, str(page))
-        soup = get_page_soup(link_to_scrap)
+        soup = get_soup(link_to_scrap)
         items = soup.find_all('div', class_='product-item-info')
         if page == 2:
             run = False
         for item in items:
-            soup = get_page_soup(link_to_scrap)
+            soup = get_soup(link_to_scrap)
             
             discount_item = item.find('div', class_='button-product-label type-discount')
             discount = get_content(discount_item)[1:-1]
            
-            # type_new_item = item.find('div', class_='button-product-label type-new')
-            # type_new = get_content(type_new_item)
-            
-            # image_item = item.find('img', class_='product-image-photo')
-            # image_url = image_item.get('src') if image_item else ""
-           
             title_item = item.find('a', class_='product-item-link')
-            # print(title_item.get('href'))
             title = str(get_content(title_item)).strip()
-            
-            # product_url = get_product_url(title)
-            # product_url = get_url_without_accents(product_url)
             
             product_url = title_item.get('href')
             
-            # print(product_url)
-            
-            soup = get_page_soup(product_url)
+            soup = get_soup(product_url)
 
             image_urls = get_photos(soup)
             image_urls = (','.join(image_urls))
-            
-            # print(image_urls)
             
             description = get_description(soup)
             
@@ -54,8 +40,6 @@ def scrap_products_depending_on_category(page_category):
                 size_charts = ""
             
             categories = get_category_tree(soup)
-            
-            # print(category)
                 
             special_price_span = item.find('span', class_='special-price')
             special_price_item = special_price_span.find('span', class_='price') if special_price_span else False
@@ -104,12 +88,11 @@ def get_category_tree(soup):
 
     for cat_part in categories.find_all('li'):
         if str(cat_part.text).strip() == "Strona główna":
-            category += "Home" + "|"
+            category += "Home" + ","
         elif category_number == len(categories.find_all('li')) - 1:
             break
         else:
-            print(str(cat_part.text).strip())
-            category += str(cat_part.text).strip() + "|"
+            category += str(cat_part.text).strip() + ","
         category_number = category_number + 1
     return category[:-1]
     

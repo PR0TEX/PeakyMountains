@@ -20,75 +20,79 @@ main_categories = get_categories()
 def scrap_categories_to_csv():
     csv_filename = "categories.csv"
 
-    soup = get_page_soup(base_url)
+    soup = get_soup(base_url)
     submenus = soup.find_all('div', class_='submenu-wrapper level0')
-    menu_items = soup.find('ul', class_ = 'megamenu-items')
+    menu_items = soup.find('ul', class_ = 'megamenu-items').find_all('li')
     categories = init_categories()
+    
+    i = 0
     for submenu in submenus:
-        # print(submenu)
-        id_category = submenus.index(submenu)
-        main_category = main_categories[id_category]
-        if()
-        # if main_category == "Nowości":
-        #     print("NOOOOOOOOWE")
-                
-        # try:
+        if menu_items[i].get('data-submenu') is None:
+            i = i + 1
+        
+        main_category = main_categories[i]
+        i = i+1
+        
         submenu_cols = submenu.find_all('div', class_='submenu-col')
-            # submenu_cols.find('li')
-        # except:
-        #     print("OOOOPS")
-        #     continue
-        print(main_category)
-        for col in submenu_cols:
-            submenu_name = get_submenu_name(col)
-            if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
-                # print(get_url_without_accents(get_product_url(submenu_name)))
-                # print(submenu_name)
-                # print("NAZWA " + submenu_name)
-                if col.find(text = "Wszystkie") is None:
-                    continue    
-                
-                endpoint_name = col.find(text = "Wszystkie").findParent('a').get('href')
-                print(endpoint_name)
-                soup = get_page_soup("https://8a.pl"+str(endpoint_name))   #nazwa_do_zmiany     
-                print("https://8a.pl"+str(endpoint_name))
-                description = get_description(soup)
-            else:
-                # print("EWAKUACJA")
-                break
-            
-            if submenu_name == "":
-                submenu_name = "Najpopularniejsze " + str(get_pronoun(main_category))
-                categories = get_with_main_subcategory(categories, submenu_name, main_category) 
-            elif submenu_name == "Polecamy":
-                categories = get_with_main_subcategory(categories, submenu_name + " " + str(get_pronoun(main_category)), main_category)
-            else:
-                categories = get_with_main_subcategory(categories, submenu_name, main_category)
-                              
-            if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
-                
-                # submenu_elements = soup.find('form', {"data-amshopby-filter": "attr_category_ids"}).find(recursive=False)
-                # ="
-                # print()
-                for x in soup.find('ul', class_ =  "am-filter-items-attr_category_ids").find_all('li'):
-                    
-                    # submenu_elements = soup.find('ul', {"class": "items-children"}).find_all('li')
+        if main_category in {"% Promocje", "Outlet do -60%"}:
+                submenu_cols = submenu.find_all('div', class_='submenu-col')
+                for col in submenu_cols:
+                    submenu_name = get_submenu_name(col)
+                   
+                    if submenu_name == "":
+                        submenu_name = "Najpopularniejsze " + str(get_pronoun(main_category))
+                        categories = get_with_main_subcategory(categories, submenu_name, main_category) 
+                    elif submenu_name == "Polecamy":
+                        categories = get_with_main_subcategory(categories, submenu_name + " " + str(get_pronoun(main_category)), main_category)
+                    else:
+                        categories = get_with_main_subcategory(categories, submenu_name, main_category)
+
+                    for sub_cat in col.find_all('li'):
+                        if submenu_name == "Polecamy":
+                            categories = get_with_main_subcategory(categories, sub_cat.a.text, submenu_name + " " + str(get_pronoun(main_category)))
+                        else:
+                            categories = get_with_main_subcategory(categories, sub_cat.a.text, submenu_name)
+        else:
+            for col in submenu_cols:
+                submenu_name = get_submenu_name(col)
+        
+                if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
+                    if col.find(text = "Wszystkie") is None and col.find(text = "Wszystkie produkty") is None:
+                        continue    
                     try:
+                        endpoint_name = col.find(text = "Wszystkie").findParent('a').get('href')
+                    except:
+                        endpoint_name = col.find(text = "Wszystkie produkty").findParent('a').get('href')
+                    soup = get_soup("https://8a.pl"+str(endpoint_name))
+                    try:
+                        description = get_description(soup)
+                    except:
+                        description = ""
+                else:
+                    break
+                
+                if submenu_name == "":
+                    submenu_name = "Najpopularniejsze " + str(get_pronoun(main_category))
+                    categories = get_with_main_subcategory(categories, submenu_name, main_category) 
+                elif submenu_name == "Polecamy":
+                    categories = get_with_main_subcategory(categories, submenu_name + " " + str(get_pronoun(main_category)), main_category)
+                else:
+                    categories = get_with_main_subcategory(categories, submenu_name, main_category)
+                                
+                if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
+
+                    for x in soup.find('ul', class_ =  "am-filter-items-attr_category_ids").find_all('li'):
+
                         submenu_elements = x.find_all('li')
-                    
+                        flag = 0
                         for element in submenu_elements:
                             parent_category = element.findParent('li').get('data-label')
                             category = element.get('data-label')
-                            # print(category)
-                    except:
-                        parent_category = x.findParent('li').get('data-label')
-                        category = x.get('data-label')
-                        
-                #     if submenu_name == "Polecamy":
-                #         categories.append([1, sub_category,submenu_name + " " + str(get_pronoun(main_category)), 0])    
-                #     else:
-                #         categories.append([1, sub_category, submenu_name, 0])
-        # soup = get_page_soup(base_url)
+                            if flag == 0:
+                                 categories = get_with_main_subcategory(categories, parent_category, submenu_name)
+                            flag = 1
+                            categories = get_with_main_subcategory(categories, category, parent_category)
+
     save_data_to_csv(categories, csv_filename)
 
 
