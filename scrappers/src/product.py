@@ -51,9 +51,9 @@ def scrap_products_depending_on_category(page_category):
             old_price_item = old_price_span.find('span', class_='price') if old_price_span else False
             old_price = get_content(old_price_item)
             old_price = old_price[:-3].replace(',','.')
-            
+            # print(categories)
             elements.append([1, title, categories, old_price, on_sale, discount, description, image_urls])
-        
+            # print(elements)[3]
         page = page + 1
 
     save_data_to_csv(elements, csv_filename)
@@ -88,11 +88,13 @@ def get_category_tree(soup):
 
     for cat_part in categories.find_all('li'):
         if str(cat_part.text).strip() == "Strona główna":
-            category += "Home" + ","
+            category += "\"" + "Home" + "\","
         elif category_number == len(categories.find_all('li')) - 1:
             break
         else:
-            category += str(cat_part.text).strip() + ","
+            category += "\"" + str(cat_part.text).strip() + "\","
+            # print(category)
         category_number = category_number + 1
+    # print(category[:-1])
     return category[:-1]
     

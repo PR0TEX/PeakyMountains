@@ -42,7 +42,7 @@ def create_link_with_query_param(base_url, page_category, query_param, param_val
 def save_data_to_csv(data, filename):
     output_directory = "./data/"
     df = pd.DataFrame(data)
-
+    # print(df)
     if not os.path.exists(output_directory):
         os.mkdir(output_directory)
 
