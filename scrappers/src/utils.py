@@ -108,7 +108,7 @@ def connect_csv():
 
     files = []
     for category in categories:
-        files.append(pd.read_csv("./data/" + category + ".csv", sep=';'))
+        files.append(pd.read_csv("./data/" + category + ".csv", sep=';', quotechar="'"))
         
     main_file = files[0]
     files.remove(files[0])
@@ -116,4 +116,4 @@ def connect_csv():
         # file = file.dropna(axis=0)
         main_file = file.merge(main_file, how="outer")
     
-    main_file.to_csv('./data/products.csv', index=False)
+    main_file.to_csv('./data/products.csv', index=False, sep=";", quotechar="'")
