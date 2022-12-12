@@ -1,14 +1,15 @@
 from categories import scrap_categories_to_csv
 from product import scrap_products_depending_on_category
+from combo import create_combos
+from utils import connect_csv
 
-scrap_categories_to_csv()
-scrap_products_depending_on_category("on")
-scrap_products_depending_on_category("ona")
-scrap_products_depending_on_category("dziecko")
-scrap_products_depending_on_category("turystyka")
-scrap_products_depending_on_category("wspinanie")
-scrap_products_depending_on_category("bieganie")
-scrap_products_depending_on_category("rower")
-scrap_products_depending_on_category("skitouring")
-scrap_products_depending_on_category("outlet")
-scrap_products_depending_on_category("promocja")
+product_id = 0
+categories = ["on", "ona", "dziecko", "turystyka", "wspinanie", "bieganie", "rower", "skitouring", "outlet", "promocja"]
+
+# scrap_categories_to_csv()
+# for category in categories:
+#     product_id = scrap_products_depending_on_category(category, product_id)
+
+# create_combos(categories)
+ 
+connect_csv()

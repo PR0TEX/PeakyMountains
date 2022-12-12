@@ -3,12 +3,12 @@ import requests
 from utils import *
 import random
 
-def scrap_products_depending_on_category(page_category):
+def scrap_products_depending_on_category(page_category, id):
     page = 1
     elements = []
     run = True
     csv_filename = page_category + '.csv'
-    elements.append(["Active (0/1)","Name *", "Categories (x,y,z)", "Price tax included", "On sale(0/1)", "Discount percent", "Description", "Image URLs", "Quantity"])
+    elements.append(["Product ID", "Active (0/1)","Name *", "Categories (x,y,z)", "Price tax included", "On sale(0/1)", "Discount percent", "Description", "Image URLs", "Quantity"])
     products_number = 50
     while run:
         link_to_scrap = create_link_with_query_param(base_url, page_category, query_param, str(page))
@@ -16,6 +16,7 @@ def scrap_products_depending_on_category(page_category):
         items = soup.find_all('div', class_='product-item-info')
         
         for item in items:
+            id += 1
             soup = get_soup(link_to_scrap)
             
             discount_item = item.find('div', class_='button-product-label type-discount')
@@ -31,7 +32,8 @@ def scrap_products_depending_on_category(page_category):
             image_urls = get_photos(soup)
             image_urls = (','.join(image_urls))
             
-            description = get_description(soup)
+            description = get_description(soup).replace(";", "").replace("\n", " ")
+
             
             if get_product_name(product_url) != "":
                 size_charts = get_size(get_product_name(product_url))
@@ -50,14 +52,16 @@ def scrap_products_depending_on_category(page_category):
             old_price_item = old_price_span.find('span', class_='price') if old_price_span else False
             old_price = get_content(old_price_item)
             old_price = old_price[:-3].replace(',','.')
-            # for size in size_charts.split(','):
-            elements.append([1, title, categories, old_price, on_sale, discount, description, image_urls, random.randint(5,100)])
+        
+            elements.append([id, 1, title, categories, old_price.replace('\xa0',''), on_sale, discount, description, image_urls, random.randint(5,100)])
             if(products_number == 0):
                 run = False
             products_number = products_number - 1 
         page = page + 1
 
     save_data_to_csv(elements, csv_filename)
+
+    return id
     
 
 def get_photos(soup):
@@ -86,16 +90,17 @@ def get_category_tree(soup):
     categories = soup.find('div', class_="breadcrumbs")
     category = ""
     category_number = 0
-
-    for cat_part in categories.find_all('li'):
+    
+    cat_list = list(categories.find_all('li'))
+    cat_list.reverse()
+    
+    for cat_part in cat_list:
         if str(cat_part.text).strip() == "Strona główna":
             category += "\"" + "Home" + "\","
-        elif category_number == len(categories.find_all('li')) - 1:
-            break
+        elif category_number == 0:
+            pass
         else:
             category += "\"" + str(cat_part.text).strip() + "\","
-            # print(category)
         category_number = category_number + 1
-    # print(category[:-1])
     return category[:-1]
     

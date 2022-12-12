@@ -38,20 +38,20 @@ def scrap_categories_to_csv():
                 submenu_cols = submenu.find_all('div', class_='submenu-col')
                 for col in submenu_cols:
                     submenu_name = get_submenu_name(col)
-                   
+                #    glowne kategorie
                     if submenu_name == "":
                         submenu_name = "Najpopularniejsze " + str(get_pronoun(main_category))
-                        categories = get_with_main_subcategory(categories, submenu_name, main_category,"") 
+                        categories = get_with_main_subcategory(1, categories, submenu_name, main_category,"") 
                     elif submenu_name == "Polecamy":
-                        categories = get_with_main_subcategory(categories, submenu_name + " " + str(get_pronoun(main_category)), main_category,"")
+                        categories = get_with_main_subcategory(1, categories, submenu_name + " " + str(get_pronoun(main_category)), main_category,"")
                     else:
-                        categories = get_with_main_subcategory(categories, submenu_name, main_category,"")
+                        categories = get_with_main_subcategory(1, categories, submenu_name, main_category,"")
 
                     for sub_cat in col.find_all('li'):
                         if submenu_name == "Polecamy":
-                            categories = get_with_main_subcategory(categories, sub_cat.a.text, submenu_name + " " + str(get_pronoun(main_category)),"")
+                            categories = get_with_main_subcategory(1, categories, sub_cat.a.text, submenu_name + " " + str(get_pronoun(main_category)),"")
                         else:
-                            categories = get_with_main_subcategory(categories, sub_cat.a.text, submenu_name,"")
+                            categories = get_with_main_subcategory(1, categories, sub_cat.a.text, submenu_name,"")
         else:
             for col in submenu_cols:
                 submenu_name = get_submenu_name(col)
@@ -70,29 +70,34 @@ def scrap_categories_to_csv():
                         description = ""
                 else:
                     break
-                
+                # glowne kategorie
                 if submenu_name == "":
                     submenu_name = "Najpopularniejsze " + str(get_pronoun(main_category))
-                    categories = get_with_main_subcategory(categories, submenu_name, main_category, "") 
+                    categories = get_with_main_subcategory(1, categories, submenu_name, main_category, "") 
                 elif submenu_name == "Polecamy":
-                    categories = get_with_main_subcategory(categories, submenu_name + " " + str(get_pronoun(main_category)), main_category, "")
+                    categories = get_with_main_subcategory(1, categories, submenu_name + " " + str(get_pronoun(main_category)), main_category, "")
                 else:
-                    categories = get_with_main_subcategory(categories, submenu_name, main_category, description)
+                    categories = get_with_main_subcategory(1, categories, submenu_name, main_category, description)
                                 
                 if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
 
-                    for x in soup.find('ul', class_ =  "am-filter-items-attr_category_ids").find_all('li'):
+                    for type_of_category in soup.find('ul', class_ =  "am-filter-items-attr_category_ids").find_all('li', recursive=False):
 
-                        submenu_elements = x.find_all('li')
+                        submenu_elements = type_of_category.find_all('li')
                         flag = 0
+                        is_nested = False
+                        # print(type_of_category.get('data-label'))
                         for element in submenu_elements:
+                            is_nested = True
                             parent_category = element.findParent('li').get('data-label')
                             category = element.get('data-label')
-                            if flag == 0:
-                                 categories = get_with_main_subcategory(categories, parent_category, submenu_name, "")
-                            flag = 1
-                            categories = get_with_main_subcategory(categories, category, parent_category, "")
 
+                            if flag == 0:
+                                categories = get_with_main_subcategory(1, categories, parent_category, submenu_name, "") #podkategoria menu
+                            flag = 1
+                            categories = get_with_main_subcategory(0, categories, category, parent_category, "") #kategoria z listy
+                        if not is_nested:
+                            categories = get_with_main_subcategory(1, categories, type_of_category.get('data-label'), submenu_name, "")      
     save_data_to_csv(categories, csv_filename)
 
 
@@ -110,8 +115,8 @@ def get_submenu_name(col):
     submenu_name = get_content(col.strong) if submenu_name == "" else submenu_name
     return submenu_name
 
-def get_with_main_subcategory(elements, category, parent_category, description):
-    elements.append([1, category, parent_category, 0, description])
+def get_with_main_subcategory(active, elements, category, parent_category, description):
+    elements.append([active, category, parent_category, 0, description])
     return elements
 
 def get_description(soup):

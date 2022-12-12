@@ -102,3 +102,18 @@ def get_soup(url):
     site = requests.get(url).text
     soup = BeautifulSoup(site, 'lxml')
     return soup
+
+def connect_csv():
+    categories = ["on", "ona", "dziecko", "turystyka", "wspinanie", "bieganie", "rower", "skitouring", "outlet", "promocja"]
+
+    files = []
+    for category in categories:
+        files.append(pd.read_csv("./data/" + category + ".csv", sep=';'))
+        
+    main_file = files[0]
+    files.remove(files[0])
+    for file in files:
+        # file = file.dropna(axis=0)
+        main_file = file.merge(main_file, how="outer")
+    
+    main_file.to_csv('./data/products.csv', index=False)
