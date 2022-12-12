@@ -308,7 +308,17 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Kaski narciarskie dla dzieci;Kaski dla dzieci;0;
 1;Pozostałe akcesoria turystyczne dla dzieci;Sprzęt turystyczny dla dzieci;0;
 1;Trekking;Turystyka;0;Trekking to kategoria z rzeczami niezbędnymi na szlaku. W sklepie 8a.pl oferujemy najwyższej jakości sprzęt, który pozwoli pokonać zarówno trudne górskie szlaki, jak i ścieżki w łatwiejszym terenie.
-1;Plecaki turystyczne;Trekking;0;
+1;Plecaki;Turystyka;0;
+1;Plecaki turystyczne;Plecaki;0;
+1;Plecaki alpinistyczne;Plecaki;0;
+1;Plecaki biegowe;Plecaki;0;
+1;Plecaki damskie;Plecaki;0;
+1;Plecaki męskie;Plecaki;0;
+1;Plecaki podróżne;Plecaki;0;
+1;Plecaki dla dzieci;Plecaki;0;
+1;Plecaki miejskie;Plecaki;0;
+1;Plecaki sportowe;Plecaki;0;
+1;Plecaki wspinaczkowe;Plecaki;0;
 0;Plecaki z siatką dystansową;Plecaki turystyczne;0;
 0;Plecaki turystyczne 10-15 litrów;Plecaki turystyczne;0;
 0;Plecaki turystyczne 20 - 30 litrów;Plecaki turystyczne;0;
@@ -475,7 +485,6 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Haki wspinaczkowe;Sprzęt wspinaczkowy;0;
 0;Bloczki i krętliki;Sprzęt wspinaczkowy;0;
 0;Ławeczki;Sprzęt wspinaczkowy;0;
-0;Taśmy, pętle;Sprzęt wspinaczkowy;0;
 0;Crash pady;Sprzęt wspinaczkowy;0;
 0;Chwyty, chwytotablice;Sprzęt wspinaczkowy;0;
 0;Torby na linę z płachtą;Sprzęt wspinaczkowy;0;
@@ -591,6 +600,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Oświetlenie do prac na wysokości;Sprzęt do pracy na wysokości;0;
 1;Pozostały ekwipunek wysokościowy;Sprzęt do pracy na wysokości;0;
 1;Obuwie i odzież do biegania;Bieganie;0;Odzież do biegania to nie tylko wygodna koszulka i funkcjonalne spodnie. Na treningi w niższych temperaturach warto dobrać do nich również termoaktywną bieliznę, ciepłą bluzę czy membranową kurtkę.
+0;Akcesoria do biegania;Bieganie;0;
 1;Buty do biegania w terenie;Obuwie i odzież do biegania;0;
 0;Buty do biegania męskie;Buty do biegania w terenie;0;
 0;Buty do biegania damskie;Buty do biegania w terenie;0;
@@ -687,15 +697,39 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Odzież na dojazdy rowerem do pracy;Odzież rowerowa;0;
 1;Sprzęt \ akcesoria rowerowe;Rower;0;
 1;Torby na rower;Sprzęt \ akcesoria rowerowe;0;
+0;Torby na kierownicę;Torby na rower;0;
+0;Torby podsiołowe;Torby na rower;0;
+0;Torby na ramię;Torby na rower;0;
 1;Sakwy rowerowe;Sprzęt \ akcesoria rowerowe;0;
 1;Plecaki rowerowe;Sprzęt \ akcesoria rowerowe;0;
+0;Plecaki z bukłakiem;Plecaki rowerowe;0;
+0;Plecaki MTB;Plecaki rowerowe;0;
+0;Plecaki enduro;Plecaki rowerowe;0;
+0;Plecaki na rower szosowy;Plecaki rowerowe;0;
 1;Kaski rowerowe;Sprzęt \ akcesoria rowerowe;0;
+0;Kaski MTB \ Enduro;Kaski rowerowe;0;
+0;Kaski szosowe;Kaski rowerowe;0;
 1;Okulary rowerowe;Sprzęt \ akcesoria rowerowe;0;
 1;Buty rowerowe;Sprzęt \ akcesoria rowerowe;0;
+0;Buty na rower męskie;Buty rowerowe;0;
+0;Buty na rower damskie;Buty rowerowe;0;
+0;Buty na platformy;Buty rowerowe;0;
+0;Buty SPD;Buty rowerowe;0;
+0;Buty rowerowe enduro;Buty rowerowe;0;
+0;Buty DH \ BMX;Buty rowerowe;0;
 1;Ochraniacze na buty rowerowe;Sprzęt \ akcesoria rowerowe;0;
 1;Akcesoria rowerowe;Sprzęt \ akcesoria rowerowe;0;
+0;Oświetlenie rowerowe;Akcesoria rowerowe;0;
+0;Narzędzia rowerowe;Akcesoria rowerowe;0;
+0;Pompki rowerowe;Akcesoria rowerowe;0;
+0;Nawigacje rowerowe \ liczniki GPS;Akcesoria rowerowe;0;
 1;Przyczepki rowerowe dla dzieci;Sprzęt \ akcesoria rowerowe;0;
 1;Foteliki rowerowe;Sprzęt \ akcesoria rowerowe;0;
+0;Okulary na rower męskie;Okulary rowerowe;0;
+0;Okulary na rower damskie;Okulary rowerowe;0;
+0;Okulary na rower MTB;Okulary rowerowe;0;
+0;Okulary kolarskie;Okulary rowerowe;0;
+0;Okulary rowerowe fotochromowe;Okulary rowerowe;0;
 1;Bikepacking \ turystyka rowerowa;Rower;0;Bikepacking, czyli turystyka rowerowa z minimalnym bagażem zdobywa coraz większą popularność wśród miłośników rowerów. W naszej ofercie zapewniamy najwyższej klasy sprzęt bikepackingowy wiodących marek, które sprawdzi się na niejednej wyprawie.
 1;Torby bikepacking;Bikepacking \ turystyka rowerowa;0;
 1;Namioty na rower;Bikepacking \ turystyka rowerowa;0;
