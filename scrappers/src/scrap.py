@@ -4,7 +4,8 @@ from combo import create_combos
 from utils import connect_csv
 
 product_id = 0
-categories = ["on", "ona", "dziecko", "turystyka", "wspinanie", "bieganie", "rower", "skitouring", "outlet", "promocja"]
+# categories = ["on", "ona", "dziecko", "turystyka", "wspinanie", "bieganie", "rower", "skitouring", "outlet", "promocja"]
+categories = ["bieganie", "rower", "skitouring", "outlet", "promocja"]
 
 # scrap_categories_to_csv()
 # for category in categories:

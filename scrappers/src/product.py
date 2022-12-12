@@ -102,5 +102,5 @@ def get_category_tree(soup):
         else:
             category += "\"" + str(cat_part.text).strip() + "\","
         category_number = category_number + 1
-    return category[:-1]
+    return category[:-1].replace('/','\\')
     

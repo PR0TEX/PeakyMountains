@@ -29,6 +29,11 @@ sizes = {
     "Skarpety": "35-38,39-41,42-44,45-47"
 }
 
+children_products = {
+    "Odzież": "Ubrania dla dzieci",
+    "Buty": "Buty dziecięce",   
+}
+
 base_url = 'https://8a.pl/'
 query_param = 'p'
 
@@ -53,6 +58,9 @@ def get_pronoun(noun):
 
 def get_size(product):
     return sizes.get(product)
+
+def get_children_category(category):
+    return children_products.get(category)
 
 def get_product_name(text):
     if "kurtka" in text:

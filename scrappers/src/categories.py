@@ -58,7 +58,11 @@ def scrap_categories_to_csv():
         
                 if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
                     if col.find(text = "Wszystkie") is None and col.find(text = "Wszystkie produkty") is None:
-                        continue    
+                         top_category = get_submenu_name(col).replace("/","\\")
+                         categories = get_with_main_subcategory(1, categories, top_category, main_category,"")
+                         for e in col.find_all('li'): 
+                            categories = get_with_main_subcategory(1, categories, e.a.text, top_category,"")    
+                         continue
                     try:
                         endpoint_name = col.find(text = "Wszystkie").findParent('a').get('href')
                     except:
@@ -77,6 +81,9 @@ def scrap_categories_to_csv():
                 elif submenu_name == "Polecamy":
                     categories = get_with_main_subcategory(1, categories, submenu_name + " " + str(get_pronoun(main_category)), main_category, "")
                 else:
+                    if(main_category == "Dziecko"):
+                        if submenu_name in {"Odzież", "Buty"}:
+                            submenu_name = get_children_category(submenu_name)
                     categories = get_with_main_subcategory(1, categories, submenu_name, main_category, description)
                                 
                 if submenu_name not in {"Polecamy", "Najpopularniejsze", " ", ""}:
@@ -91,10 +98,15 @@ def scrap_categories_to_csv():
                             is_nested = True
                             parent_category = element.findParent('li').get('data-label')
                             category = element.get('data-label')
-
+                            # print(main_category)
+                            if(main_category == "Dziecko"):
+                                if submenu_name in {"Odzież", "Buty"}:
+                                    submenu_name = get_children_category(submenu_name)
                             if flag == 0:
                                 categories = get_with_main_subcategory(1, categories, parent_category, submenu_name, "") #podkategoria menu
                             flag = 1
+                            # if(parent_category == "Rower"):
+                            # print(category)
                             categories = get_with_main_subcategory(0, categories, category, parent_category, "") #kategoria z listy
                         if not is_nested:
                             categories = get_with_main_subcategory(1, categories, type_of_category.get('data-label'), submenu_name, "")      
@@ -111,12 +123,13 @@ def init_categories():
     return elements
 
 def get_submenu_name(col):
+    # submenu_name = "" if col.h3 is None else get_content(col.h3)
     submenu_name = get_content(col.h3)
     submenu_name = get_content(col.strong) if submenu_name == "" else submenu_name
     return submenu_name
 
 def get_with_main_subcategory(active, elements, category, parent_category, description):
-    elements.append([active, category, parent_category, 0, description])
+    elements.append([active, category.replace('/','\\'), parent_category.replace('/','\\'), 0, description])
     return elements
 
 def get_description(soup):

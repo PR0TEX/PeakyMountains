@@ -30,7 +30,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Bluzy męskie;Odzież męska;0;
 0;Bluzy z kapturem męskie;Bluzy męskie;0;
 0;Bluzy rozpinane męskie;Bluzy męskie;0;
-0;Bluzy z zamkiem 1/2 męskie;Bluzy męskie;0;
+0;Bluzy z zamkiem 1\2 męskie;Bluzy męskie;0;
 0;Bluzy bez kaptura męskie;Bluzy męskie;0;
 0;Bluzy trekkingowe męskie;Bluzy męskie;0;
 0;Bluzy biegowe męskie;Bluzy męskie;0;
@@ -73,7 +73,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Spodenki turystyczne męskie;Spodenki męskie;0;
 0;Spodenki treningowe męskie;Spodenki męskie;0;
 0;Spodenki biegowe męskie;Spodenki męskie;0;
-0;Spodenki 3/4 męskie;Spodenki męskie;0;
+0;Spodenki 3\4 męskie;Spodenki męskie;0;
 0;Spodenki taktyczne męskie;Spodenki męskie;0;
 1;Skarpety męskie;Odzież męska;0;
 0;Skarpety trekkingowe męskie;Skarpety męskie;0;
@@ -164,7 +164,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Bluzy z kapturem damskie;Bluzy damskie;0;
 0;Bluzy bez kaptura damskie;Bluzy damskie;0;
 0;Bluzy rozpinane damskie;Bluzy damskie;0;
-0;Bluzy z zamkiem 1/2 damskie;Bluzy damskie;0;
+0;Bluzy z zamkiem 1\2 damskie;Bluzy damskie;0;
 0;Bluzy trekkingowe damskie;Bluzy damskie;0;
 0;Bluzy biegowe damskie;Bluzy damskie;0;
 0;Bluzy polarowe damskie;Bluzy damskie;0;
@@ -208,7 +208,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Spódnice biegowe;Spodenki i spódnice damskie;0;
 0;Spódnice turystyczne;Spodenki i spódnice damskie;0;
 0;Spodenki capri damskie;Spodenki i spódnice damskie;0;
-0;Sukienki sportowe / turystyczne;Spodenki i spódnice damskie;0;
+0;Sukienki sportowe \ turystyczne;Spodenki i spódnice damskie;0;
 1;Skarpety damskie;Odzież damska;0;
 0;Skarpety trekkingowe damskie;Skarpety damskie;0;
 0;Skarpety turystyczne damskie;Skarpety damskie;0;
@@ -275,28 +275,28 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Sznurowadła;Akcesoria obuwnicze;0;
 0;Impregnaty do obuwia trekkingowego;Akcesoria obuwnicze;0;
 0;Nakładki i kolce na buty;Akcesoria obuwnicze;0;
-1;Odzież;Dziecko;0;Ubrania dla dzieci topowych marek outdoorowych łączą w sobie świetną jakość wykonania oraz nowoczesną stylistyką. Odzież dziecięca do turystyki, tak samo jak ta dla dorosłych, jest produkowana z najwyższej jakości materiałów. Sprawdź dziecięce ubrania na lato i zimę dla tych najmłodszych i trochę starszych pociech!
-1;Odzież dla chłopców;Odzież;0;
-1;Odzież dla dziewczynek;Odzież;0;
-1;Kurtki dziecięce;Odzież;0;
-1;Bluzy dla dzieci;Odzież;0;
-1;Koszulki dla dzieci;Odzież;0;
-1;Bielizna termoaktywna dla dzieci;Odzież;0;
+1;Ubrania dla dzieci;Dziecko;0;Ubrania dla dzieci topowych marek outdoorowych łączą w sobie świetną jakość wykonania oraz nowoczesną stylistyką. Odzież dziecięca do turystyki, tak samo jak ta dla dorosłych, jest produkowana z najwyższej jakości materiałów. Sprawdź dziecięce ubrania na lato i zimę dla tych najmłodszych i trochę starszych pociech!
+1;Odzież dla chłopców;Ubrania dla dzieci;0;
+1;Odzież dla dziewczynek;Ubrania dla dzieci;0;
+1;Kurtki dziecięce;Ubrania dla dzieci;0;
+1;Bluzy dla dzieci;Ubrania dla dzieci;0;
+1;Koszulki dla dzieci;Ubrania dla dzieci;0;
+1;Bielizna termoaktywna dla dzieci;Ubrania dla dzieci;0;
 0;Bielizna termoaktywna dla chłopca;Bielizna termoaktywna dla dzieci;0;
 0;Bielizna termoaktywna dla dziewczynki;Bielizna termoaktywna dla dzieci;0;
-1;Skarpety dziecięce;Odzież;0;
-1;Chusty wielofunkcyjne dla dzieci;Odzież;0;
-1;Kominiarki dla dzieci;Odzież;0;
-1;Czapki dla dzieci;Odzież;0;
+1;Skarpety dziecięce;Ubrania dla dzieci;0;
+1;Chusty wielofunkcyjne dla dzieci;Ubrania dla dzieci;0;
+1;Kominiarki dla dzieci;Ubrania dla dzieci;0;
+1;Czapki dla dzieci;Ubrania dla dzieci;0;
 0;Czapki dla chłopca;Czapki dla dzieci;0;
 0;Czapki dla dziewczynki;Czapki dla dzieci;0;
-1;Rękawiczki dziecięce;Odzież;0;
+1;Rękawiczki dziecięce;Ubrania dla dzieci;0;
 0;Rękawice narciarskie dziecięce;Rękawiczki dziecięce;0;
-1;Stuptuty dziecięce;Odzież;0;
-1;Buty;Dziecko;0;Buty dziecięce najlepszych marek outdoorowych są przygotowywane z taką samą dbałością o szczegóły jak obuwie dla dorosłych. W naszej ofercie znajdują się buty dla dzieci na każdy sezon. Ocieplane obuwie letnie, całoroczne buty turystyczne oraz lekkie sandały na lato. Sprawdź szeroką ofertę butów dziecięcych do każdej aktywności!
-1;Buty dla chłopców;Buty;0;
-1;Buty dla dziewczynek;Buty;0;
-1;Buty wspinaczkowe dla dzieci;Buty;0;
+1;Stuptuty dziecięce;Ubrania dla dzieci;0;
+1;Buty dziecięce;Dziecko;0;Buty dziecięce najlepszych marek outdoorowych są przygotowywane z taką samą dbałością o szczegóły jak obuwie dla dorosłych. W naszej ofercie znajdują się buty dla dzieci na każdy sezon. Ocieplane obuwie letnie, całoroczne buty turystyczne oraz lekkie sandały na lato. Sprawdź szeroką ofertę butów dziecięcych do każdej aktywności!
+1;Buty dla chłopców;Buty dziecięce;0;
+1;Buty dla dziewczynek;Buty dziecięce;0;
+1;Buty wspinaczkowe dla dzieci;Buty dziecięce;0;
 1;Sprzęt turystyczny dla dzieci;Dziecko;0;Sprzęt turystyczny dla dzieci to wszystko, czego najmłodsi miłośnicy turystyki mogą potrzebować na szlaku. W ofercie znajdują się dziecięce akcesoria turystyczne przystosowane do wzrostu oraz potrzeb maluchów. Ozdobiony kolorowymi wzorami oraz postaciami z bajek sprzęt turystyczny dla dzieci sprawi, że każdy wyjazd będzie wyjątkowym przeżyciem.
 1;Plecaki turystyczne dla dzieci;Sprzęt turystyczny dla dzieci;0;
 1;Śpiwory dla dzieci;Sprzęt turystyczny dla dzieci;0;
@@ -317,7 +317,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Plecaki turystyczne 80-100 litrów;Plecaki turystyczne;0;
 0;Plecaki trekkingowe;Plecaki turystyczne;0;
 1;Plecaki podróżne;Trekking;0;
-1;Plecaki taktyczne / survivalowe / bushcraft;Trekking;0;
+1;Plecaki taktyczne \ survivalowe \ bushcraft;Trekking;0;
 1;Pokrowce na plecak;Trekking;0;
 1;Bukłaki na wodę;Trekking;0;
 1;Torby;Trekking;0;
@@ -419,7 +419,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Śpiwory turystyczne;Camping;0;
 0;Śpiwory puchowe;Śpiwory turystyczne;0;
 0;Śpiwory syntetyczne;Śpiwory turystyczne;0;
-0;Śpiwory podwójne / dwuosobowe;Śpiwory turystyczne;0;
+0;Śpiwory podwójne \ dwuosobowe;Śpiwory turystyczne;0;
 0;Wkładki do śpiwora;Śpiwory turystyczne;0;
 0;Worki kompresyjne;Śpiwory turystyczne;0;
 0;Płachty biwakowe;Śpiwory turystyczne;0;
@@ -461,7 +461,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Sprzęt wspinaczkowy;Wspinaczka i bouldering;0;
 0;Liny wspinaczkowe;Sprzęt wspinaczkowy;0;
 0;Liny dynamiczne;Liny wspinaczkowe;0;
-0;Liny statyczne / półstatyczne;Liny wspinaczkowe;0;
+0;Liny statyczne \ półstatyczne;Liny wspinaczkowe;0;
 0;Linki pomocnicze;Liny wspinaczkowe;0;
 0;Ekspresy wspinaczkowe;Sprzęt wspinaczkowy;0;
 0;Karabinki wspinaczkowe;Sprzęt wspinaczkowy;0;
@@ -508,7 +508,7 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Koszulki wspinaczkowe;Odzież wspinaczkowa;0;
 0;Rękawiczki do asekuracji;Odzież wspinaczkowa;0;
 1;Plecaki wspinaczkowe;Wspinaczka i bouldering;0;
-1;Plecaki górskie / alpinistyczne;Wspinaczka i bouldering;0;
+1;Plecaki górskie \ alpinistyczne;Wspinaczka i bouldering;0;
 1;Sprzęt do prac na wysokości;Wspinaczka i bouldering;0;
 0;Karabinki i haki zaczepowe;Sprzęt do prac na wysokości;0;
 0;Uprzęże przemysłowe;Sprzęt do prac na wysokości;0;
@@ -685,11 +685,22 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 0;Ochraniacze na rower enduro;Ochraniacze na rower;0;
 1;Kamizelki na rower;Odzież rowerowa;0;
 1;Odzież na dojazdy rowerem do pracy;Odzież rowerowa;0;
-1;Bikepacking / turystyka rowerowa;Rower;0;Bikepacking, czyli turystyka rowerowa z minimalnym bagażem zdobywa coraz większą popularność wśród miłośników rowerów. W naszej ofercie zapewniamy najwyższej klasy sprzęt bikepackingowy wiodących marek, które sprawdzi się na niejednej wyprawie.
-1;Torby bikepacking;Bikepacking / turystyka rowerowa;0;
-1;Namioty na rower;Bikepacking / turystyka rowerowa;0;
-1;Hamaki rowerowe;Bikepacking / turystyka rowerowa;0;
-1;Śpiwory na rower;Bikepacking / turystyka rowerowa;0;
+1;Sprzęt \ akcesoria rowerowe;Rower;0;
+1;Torby na rower;Sprzęt \ akcesoria rowerowe;0;
+1;Sakwy rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Plecaki rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Kaski rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Okulary rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Buty rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Ochraniacze na buty rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Akcesoria rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Przyczepki rowerowe dla dzieci;Sprzęt \ akcesoria rowerowe;0;
+1;Foteliki rowerowe;Sprzęt \ akcesoria rowerowe;0;
+1;Bikepacking \ turystyka rowerowa;Rower;0;Bikepacking, czyli turystyka rowerowa z minimalnym bagażem zdobywa coraz większą popularność wśród miłośników rowerów. W naszej ofercie zapewniamy najwyższej klasy sprzęt bikepackingowy wiodących marek, które sprawdzi się na niejednej wyprawie.
+1;Torby bikepacking;Bikepacking \ turystyka rowerowa;0;
+1;Namioty na rower;Bikepacking \ turystyka rowerowa;0;
+1;Hamaki rowerowe;Bikepacking \ turystyka rowerowa;0;
+1;Śpiwory na rower;Bikepacking \ turystyka rowerowa;0;
 1;Sprzęt skiturowy;Skitouring;0;Sprzęt skiturowy w 8a.pl to ekwipunek najlepszych producentów Dynafit, Climbing Technology, Ortovox, Black Diamond, Pieps czy Pomoca. Dzięki temu każdy skiturowy wypad będzie bezpieczniejszy i maksymalnie efektywny.
 1;Buty skiturowe;Sprzęt skiturowy;0;
 1;Narty skiturowe;Sprzęt skiturowy;0;
@@ -748,18 +759,12 @@ Active (0/1);Name *;Parent Category;Root Category (0/1);Description
 1;Prezent dla turysty do 150 zł;Najpopularniejsze z promocji;0;
 1;Prezent dla turysty do 300 zł;Najpopularniejsze z promocji;0;
 1;Prezent dla turysty do 500 zł;Najpopularniejsze z promocji;0;
-1;'Prezent dla wspinacza do 150 zł
-';Najpopularniejsze z promocji;0;
-1;'Prezent dla wspinacza do 300 zł
-';Najpopularniejsze z promocji;0;
-1;'Prezent dla wspinacza do 500 zł
-';Najpopularniejsze z promocji;0;
-1;'Prezent dla skiturowca do 150 zł
-';Najpopularniejsze z promocji;0;
-1;'Prezent dla skiturowca do 300 zł
-';Najpopularniejsze z promocji;0;
-1;'Prezent dla skiturowca do 500 zł
-';Najpopularniejsze z promocji;0;
+1;Prezent dla wspinacza do 150 zł;Najpopularniejsze z promocji;0;
+1;Prezent dla wspinacza do 300 zł;Najpopularniejsze z promocji;0;
+1;Prezent dla wspinacza do 500 zł;Najpopularniejsze z promocji;0;
+1;Prezent dla skiturowca do 150 zł;Najpopularniejsze z promocji;0;
+1;Prezent dla skiturowca do 300 zł;Najpopularniejsze z promocji;0;
+1;Prezent dla skiturowca do 500 zł;Najpopularniejsze z promocji;0;
 1;Odzież Outlet;Outlet do -60%;0;
 1;Kurtki;Odzież Outlet;0;
 1;Bluzy;Odzież Outlet;0;
