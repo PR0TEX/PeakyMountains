@@ -23,7 +23,10 @@ CMD ["/tmp/docker_run_git.sh"]
 
 
 ## SSL
-COPY ssl/keys /etc/apache2/ssl
+COPY ssl/generate-keys.sh /etc/apache2/ssl/
+CMD ["/etc/apache2/ssl/generate-keys.sh"]
+
+# COPY ssl/keys /etc/apache2/ssl
 
 COPY ssl/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
