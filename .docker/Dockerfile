@@ -1,5 +1,7 @@
 FROM prestashop/prestashop-git:7.4
 
+LABEL org.opencontainers.image.source https://github.com/PR0TEX/PeakyMountains
+
 # To run files with the same group as your primary user
 RUN groupmod -g 1000 www-data \
   && usermod -u 1000 -g 1000 www-data
@@ -19,7 +21,8 @@ RUN apt install -y nodejs
 
 RUN apt -y install npm
 
-CMD ["/tmp/docker_run_git.sh"]
+#TODO Add entrypoint.sh
+ENTRYPOINT ["/tmp/docker_run_git.sh"]
 
 
 ## SSL
@@ -36,4 +39,4 @@ RUN a2enmod ssl
 EXPOSE 80
 EXPOSE 443
 
-# RUN service apache2 restart
+RUN service apache2 restart
