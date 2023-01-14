@@ -19,7 +19,7 @@ RUN chown -R www-data:www-data /var/www/html/var
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt install -y nodejs
 
-RUN apt -y install npm
+# RUN apt -y install npm
 
 #TODO Add entrypoint.sh
 ENTRYPOINT ["/tmp/docker_run_git.sh"]
@@ -39,4 +39,4 @@ RUN a2enmod ssl
 EXPOSE 80
 EXPOSE 443
 
-RUN service apache2 restart
+# RUN service apache2 restart
