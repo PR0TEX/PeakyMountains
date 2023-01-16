@@ -43,4 +43,6 @@ RUN a2enmod ssl
 EXPOSE 80
 EXPOSE 443
 
+WORKDIR /var/www/html
+
 # RUN service apache2 restart
