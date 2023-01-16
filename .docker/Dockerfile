@@ -31,6 +31,8 @@ COPY ssl/generate-keys.sh /etc/apache2/ssl/
 WORKDIR /etc/apache2/ssl
 CMD ["./generate-keys.sh"]
 
+RUN ls -lah
+
 # COPY ssl/keys /etc/apache2/ssl
 
 COPY ssl/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
