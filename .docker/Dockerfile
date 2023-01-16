@@ -17,7 +17,7 @@ RUN chown -R www-data:www-data /var/www/html/vendor
 RUN chown -R www-data:www-data /var/www/html/var
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt install -y nodejs
+RUN apt-get install -y nodejs
 
 # RUN apt -y install npm
 
