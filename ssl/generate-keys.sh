@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p keys
+
 openssl req \
   -x509 \
   -nodes \
@@ -7,30 +9,30 @@ openssl req \
   -sha256 \
   -days 1024 \
   -newkey rsa:2048 \
-  -keyout RootCA.key \
-  -out RootCA.pem \
+  -keyout keys/RootCA.key \
+  -out keys/RootCA.pem \
   -subj "/C=US/CN=Example-Root-CA"
 
 openssl x509 \
   -outform pem \
-  -in RootCA.pem \
-  -out RootCA.crt
+  -in keys/RootCA.pem \
+  -out keys/RootCA.crt
 
 openssl req \
   -new \
   -nodes \
   -newkey rsa:2048 \
-  -keyout localhost.key \
-  -out localhost.csr \
+  -keyout keys/localhost.key \
+  -out keys/localhost.csr \
   -subj "/C=US/ST=YourState/L=YourCity/O=Example-Certificates/CN=localhost.local"
 
 openssl x509 \
   -req \
   -sha256 \
   -days 1024 \
-  -in localhost.csr \
-  -CA RootCA.pem \
-  -CAkey RootCA.key \
+  -in keys/localhost.csr \
+  -CA keys/RootCA.pem \
+  -CAkey keys/RootCA.key \
   -CAcreateserial \
   -extfile domains.ext \
-  -out localhost.crt
+  -out keys/localhost.crt
