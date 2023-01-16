@@ -21,15 +21,15 @@ RUN apt install -y nodejs
 
 # RUN apt -y install npm
 
-#TODO Add entrypoint.sh
-ENTRYPOINT ["/tmp/docker_run_git.sh"]
+CMD ["/tmp/docker_run_git.sh"]
 
 
 ## SSL
 COPY ssl/domains.ext /etc/apache2/ssl/
 COPY ssl/generate-keys.sh /etc/apache2/ssl/
 WORKDIR /etc/apache2/ssl
-CMD ["./generate-keys.sh"]
+# CMD ["./generate-keys.sh"]
+RUN ./generate_keys.sh
 
 RUN ls -lah
 
