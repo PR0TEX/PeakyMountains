@@ -27,7 +27,8 @@ ENTRYPOINT ["/tmp/docker_run_git.sh"]
 
 ## SSL
 COPY ssl/generate-keys.sh /etc/apache2/ssl/
-CMD ["/etc/apache2/ssl/generate-keys.sh"]
+WORKDIR /etc/apache2/ssl
+CMD ["./generate-keys.sh"]
 
 # COPY ssl/keys /etc/apache2/ssl
 
