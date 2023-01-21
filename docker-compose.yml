@@ -2,21 +2,18 @@ version: '3'
 
 volumes:
   db-data:
-  db-dump:
-  vendor:
-  var:  
 
 services:
   mysql:
     image: ghcr.io/pr0tex/mysql:latest
     build:
       context: .
-      dockerfile: .docker/database.Dockerfile
+      dockerfile: dockerfiles/database.Dockerfile
     ports:
       - "8306:3306"
     volumes:
       - db-data:/var/lib/mysql
-      - ./db-dump:/docker-entrypoint-initdb.d
+      # - ./db-dump:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: prestashop
       MYSQL_DATABASE: prestashop
@@ -24,26 +21,26 @@ services:
   prestashop-git:
     image: ghcr.io/pr0tex/prestashop:latest
     build:
+      dockerfile: dockerfiles/presta.Dockerfile  
       context: .
-      dockerfile: .docker/Dockerfile
     environment:
-      PS_DEV_MODE: 0
-      DISABLE_MAKE: ${DISABLE_MAKE:-0} #Disable makefile
+      # DISABLE_MAKE: ${DISABLE_MAKE:-0} #Disable makefile
       PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
       PS_ERASE_DB: ${PS_ERASE_DB}
       PS_DEMO_MODE: ${PS_DEMO_MODE}
+      PS_INSTALL_DB: ${PS_INSTALL_DB}
       DB_PASSWD: ${DB_PASSWD:-prestashop}
       DB_NAME: ${DB_NAME:-prestashop}
       DB_SERVER: ${DB_SERVER:-mysql}
       PS_DOMAIN: ${PS_DOMAIN}
-      PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-install-dev}
+      # PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-install-dev}
       PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
       PS_ENABLE_SSL: ${PS_ENABLE_SSL}
-    command: ["/tmp/wait-for-it.sh", "--timeout=60", "--strict", "mysql:3306", "--", "/tmp/docker_run_git.sh"]
     ports:
       - 80:80
       - 443:443
     volumes:
-      - ./:/var/www/html/:delegated
-      - vendor:/var/www/html/vendor
-      - var:/var/www/html/var
+       - ./app:/var/www/html
+    # depends_on:
+    #   mysql:
+    #     condition: service_healthy
