@@ -2,7 +2,16 @@ FROM prestashop/prestashop:1.7.8.7
 
 LABEL org.opencontainers.image.source https://github.com/PR0TEX/PeakyMountains
 
-RUN apt-get update
+RUN rm -rf /var/www/html/install
+
+RUN apt-get update \
+ && apt-get install memcached libmemcached-dev zlib1g-dev -y
+
+RUN pecl install memcached
+
+RUN echo extension=memcached.so >> /usr/local/etc/php/php.ini
+
+RUN /etc/init.d/apache2 restart
 
 ## SSL
 COPY ssl/domains.ext /etc/apache2/ssl/

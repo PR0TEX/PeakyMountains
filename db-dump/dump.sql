@@ -1,5 +1,5 @@
 /* Backup for localhost/
- *  at 1674579477
+ *  at 1674582994
  */
 
 SET NAMES 'utf8mb4';
@@ -3267,6 +3267,7 @@ INSERT INTO `ps_category_product` VALUES
 ('2','18','18'),
 ('2','19','19'),
 ('2','20','20'),
+('2','21','21'),
 ('3','1','1'),
 ('3','2','2'),
 ('4','1','1'),
@@ -3469,11 +3470,11 @@ INSERT INTO `ps_condition` VALUES
 ('8','8','sql','SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN (\"0\", \"My carrier\")','>','0','2','hook','actionObjectCarrierAddAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('9','9','sql','SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN (\"0\", \"My carrier\")','>','1','2','hook','actionObjectCarrierAddAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('10','10','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','0','1','hook','actionObjectProductAddAfter','1','2023-01-24 07:58:45','2023-01-24 08:13:48'),
-('11','11','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 08:13:50'),
-('12','12','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 08:13:50'),
-('13','13','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 08:13:50'),
-('14','14','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 08:13:50'),
-('15','15','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 08:13:50'),
+('11','11','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('12','12','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('13','13','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('14','14','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('15','15','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
 ('16','16','configuration','PS_SHOP_PHONE','!=','0','1','hook','actionAdminStoresControllerUpdate_optionsAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('17','17','sql','SELECT COUNT(*) FROM PREFIX_contact','>','2','2','hook','actionObjectContactAddAfter','0','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('18','18','sql','SELECT COUNT(*) FROM PREFIX_contact','>','4','2','hook','actionObjectContactAddAfter','0','2023-01-24 07:58:45','2023-01-24 07:58:45'),
@@ -3591,7 +3592,7 @@ INSERT INTO `ps_condition` VALUES
 ('130','376','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%shopgate%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','30','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('131','377','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%moneybookers%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','1','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('132','394','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%sofortbanking%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','30','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
-('133','399','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','499','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:46','2023-01-24 08:13:48'),
+('133','399','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','499','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:46','2023-01-24 18:49:21'),
 ('134','424','sql','SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like \"%alliance3%\"','>=','1','0','hook','actionModuleInstallAfter','0','2023-01-24 07:58:46','2023-01-24 11:45:35'),
 ('135','425','sql','SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE \'ALLIANCE3_CONFIGURATION_OK\') AND ( value = \'1\')) OR (( name LIKE \'ALLIANCE_DEMO\') AND ( value = \'0\'))','==','2','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('136','426','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%alliance3%\" AND os.logable = 1','>=','1','0','time','2','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
@@ -4123,7 +4124,7 @@ INSERT INTO `ps_configuration` VALUES
 ('145',NULL,NULL,'PS_VIRTUAL_PROD_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-22 23:47:38'),
 ('146',NULL,NULL,'PS_CUSTOMIZATION_FEATURE_ACTIVE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('147',NULL,NULL,'PS_CART_RULE_FEATURE_ACTIVE','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-('148',NULL,NULL,'PS_PACK_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-22 23:47:41'),
+('148',NULL,NULL,'PS_PACK_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-24 18:51:41'),
 ('149',NULL,NULL,'PS_ALIAS_FEATURE_ACTIVE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('150',NULL,NULL,'PS_TAX_ADDRESS_TYPE','id_address_delivery','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('151',NULL,NULL,'PS_SHOP_DEFAULT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -5768,7 +5769,9 @@ CREATE TABLE `ps_eventbus_incremental_sync` (
 
 INSERT INTO `ps_eventbus_incremental_sync` VALUES
 ('custom_product_carriers','20','1','pl','2023-01-24 08:13:48'),
-('products','20','1','pl','2023-01-24 08:13:48');
+('custom_product_carriers','21','1','pl','2023-01-24 18:51:41'),
+('products','20','1','pl','2023-01-24 08:13:48'),
+('products','21','1','pl','2023-01-24 18:51:41');
 /* Scheme for table ps_eventbus_job */
 DROP TABLE IF EXISTS `ps_eventbus_job`;
 CREATE TABLE `ps_eventbus_job` (
@@ -7763,7 +7766,8 @@ INSERT INTO `ps_layered_price_index` VALUES
 ('17','1','1','15.867000','15.867000','14'),
 ('18','1','1','15.867000','15.867000','14'),
 ('19','1','1','17.097000','17.097000','14'),
-('20','1','1','0.000000','0.000000','14');
+('20','1','1','0.000000','0.000000','14'),
+('21','1','1','0.000000','0.000000','14');
 /* Scheme for table ps_layered_product_attribute */
 DROP TABLE IF EXISTS `ps_layered_product_attribute`;
 CREATE TABLE `ps_layered_product_attribute` (
@@ -7889,7 +7893,7 @@ CREATE TABLE `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=260 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=265 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_log` VALUES
 ('1','1','0','Exporting mail with theme modern for language Polski (Polish)',NULL,'0','1',NULL,'0','0','0','2023-01-22 23:46:12','2023-01-22 23:46:12'),
@@ -8151,7 +8155,12 @@ INSERT INTO `ps_log` VALUES
 ('256','3','0','You must specify as many arguments (%d, %s ...) as the original string.',NULL,'0','1',NULL,'1','0','1','2023-01-24 11:57:34','2023-01-24 11:57:34'),
 ('257','1','0','Exporting mail with theme modern for language Polski (Polish)',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
 ('258','1','0','Core output folder: /var/www/html/mails',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
-('259','1','0','Modules output folder: /var/www/html/modules/',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39');
+('259','1','0','Modules output folder: /var/www/html/modules/',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
+('260','3','0','No result was found for query although at least one row was expected.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:47:42','2023-01-24 18:47:42'),
+('261','3','0','You must specify as many arguments (%d, %s ...) as the original string.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:47:42','2023-01-24 18:47:42'),
+('262','3','0','No result was found for query although at least one row was expected.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:48:13','2023-01-24 18:48:13'),
+('263','3','0','You must specify as many arguments (%d, %s ...) as the original string.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:48:13','2023-01-24 18:48:13'),
+('264','1','0','Product modification','Product','21','1',NULL,'1','0','1','2023-01-24 18:51:41','2023-01-24 18:51:41');
 /* Scheme for table ps_mail */
 DROP TABLE IF EXISTS `ps_mail`;
 CREATE TABLE `ps_mail` (
@@ -9658,7 +9667,7 @@ CREATE TABLE `ps_product` (
   KEY `indexed` (`indexed`),
   KEY `date_add` (`date_add`),
   KEY `state` (`state`,`date_upd`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_product` VALUES
 ('1','1','1','4','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','23.900000','0.000000',NULL,'0.000000','0.000000','demo_1',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','1','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
@@ -9680,7 +9689,8 @@ INSERT INTO `ps_product` VALUES
 ('17','2','2','7','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','demo_9',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','32','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','combinations'),
 ('18','2','2','7','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','demo_10',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','36','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','combinations'),
 ('19','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','13.900000','0.000000',NULL,'0.000000','0.000000','demo_14',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','1','0','1','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','standard'),
-('20','0','0','2','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','0','3','0','');
+('20','0','0','2','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','0','3','0',''),
+('21','0','0','2','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','0','2023-01-24 18:49:21','2023-01-24 18:51:41','0','3','1','');
 /* Scheme for table ps_product_attachment */
 DROP TABLE IF EXISTS `ps_product_attachment`;
 CREATE TABLE `ps_product_attachment` (
@@ -10098,7 +10108,8 @@ INSERT INTO `ps_product_lang` VALUES
 ('17','1','1','<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>','<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>','brown-bear-notebook',NULL,NULL,NULL,'Brown bear notebook',NULL,NULL,NULL,NULL),
 ('18','1','1','<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>','<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>','hummingbird-notebook',NULL,NULL,NULL,'Hummingbird notebook',NULL,NULL,NULL,NULL),
 ('19','1','1','<p>Customize your mug with the text of your choice. A mood, a message, a quote... It\'s up to you! Maximum number of characters: ---</p>','<p>White Ceramic Mug. 325ml</p>','customizable-mug',NULL,NULL,NULL,'Customizable mug',NULL,NULL,NULL,NULL),
-('20','1','1',NULL,NULL,'',NULL,NULL,NULL,'',NULL,NULL,NULL,NULL);
+('20','1','1',NULL,NULL,'',NULL,NULL,NULL,'',NULL,NULL,NULL,NULL),
+('21','1','1','<p>test</p>','<p>test</p>','test',NULL,NULL,NULL,'Test',NULL,NULL,NULL,NULL);
 /* Scheme for table ps_product_sale */
 DROP TABLE IF EXISTS `ps_product_sale`;
 CREATE TABLE `ps_product_sale` (
@@ -10174,7 +10185,8 @@ INSERT INTO `ps_product_shop` VALUES
 ('17','1','7','1','0','0','0.000000','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','32','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
 ('18','1','7','1','0','0','0.000000','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','36','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
 ('19','1','8','1','0','0','0.000000','1',NULL,'0','13.900000','0.000000',NULL,'0.000000','0.000000','1','0','1','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
-('20','1','2','1','0','0','0.000000','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','3');
+('20','1','2','1','0','0','0.000000','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','3'),
+('21','1','2','1','0','0','0.000000','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 18:49:21','2023-01-24 18:51:41','3');
 /* Scheme for table ps_product_supplier */
 DROP TABLE IF EXISTS `ps_product_supplier`;
 CREATE TABLE `ps_product_supplier` (
@@ -11659,8 +11671,10 @@ CREATE TABLE `ps_specific_price_priority` (
   `priority` varchar(80) NOT NULL,
   PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   UNIQUE KEY `id_product` (`id_product`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `ps_specific_price_priority` VALUES
+('1','21','id_shop;id_currency;id_country;id_group');
 /* Scheme for table ps_specific_price_rule */
 DROP TABLE IF EXISTS `ps_specific_price_rule`;
 CREATE TABLE `ps_specific_price_rule` (
@@ -12123,7 +12137,7 @@ CREATE TABLE `ps_stock_available` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_product` (`id_product`),
   KEY `id_product_attribute` (`id_product_attribute`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_stock_available` VALUES
 ('1','1','0','1','0','2400','2400','0','0','2',''),
@@ -12184,7 +12198,8 @@ INSERT INTO `ps_stock_available` VALUES
 ('56','18','37','1','0','300','300','0','0','2',''),
 ('57','18','38','1','0','300','300','0','0','2',''),
 ('58','18','39','1','0','300','300','0','0','2',''),
-('59','20','0','1','0','0','0','0','0','2','');
+('59','20','0','1','0','0','0','0','0','2',''),
+('60','21','0','1','0','0','0','0','0','2','');
 /* Scheme for table ps_stock_mvt */
 DROP TABLE IF EXISTS `ps_stock_mvt`;
 CREATE TABLE `ps_stock_mvt` (
