@@ -5,7 +5,6 @@ volumes:
 
 services:
   mysql:
-    image: ghcr.io/pr0tex/mysql:latest
     build:
       context: .
       dockerfile: dockerfiles/database.Dockerfile
@@ -23,7 +22,6 @@ services:
       retries: 10
 
   prestashop-git:
-    image: ghcr.io/pr0tex/prestashop:latest
     build:
       dockerfile: dockerfiles/presta.Dockerfile  
       context: .
