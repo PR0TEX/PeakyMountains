@@ -1,5 +1,5 @@
 /* Backup for localhost/
- *  at 1674558189
+ *  at 1674579477
  */
 
 SET NAMES 'utf8mb4';
@@ -1165,7 +1165,7 @@ CREATE TABLE `ps_admin_filter` (
   `filter_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `admin_filter_search_id_idx` (`employee`,`shop`,`controller`,`action`,`filter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `ps_admin_filter` VALUES
 ('1','1','1','','','{\"limit\":50,\"orderBy\":\"id_order\",\"sortOrder\":\"DESC\",\"filters\":[]}','order'),
@@ -1195,7 +1195,8 @@ INSERT INTO `ps_admin_filter` VALUES
 ('25','1','1','','','{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}','cms_page'),
 ('26','1','1','employee','index','{\"limit\":50,\"orderBy\":\"id_employee\",\"sortOrder\":\"asc\",\"filters\":[]}',''),
 ('27','1','1','','','{\"limit\":10,\"orderBy\":\"id_log\",\"sortOrder\":\"desc\",\"filters\":{\"severity\":\"1\"}}','logs'),
-('28','1','1','','','{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}','webservice_key');
+('28','1','1','','','{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}','webservice_key'),
+('29','1','1','','','{\"limit\":50,\"orderBy\":\"id_meta\",\"sortOrder\":\"asc\",\"filters\":[]}','meta');
 /* Scheme for table ps_advice */
 DROP TABLE IF EXISTS `ps_advice`;
 CREATE TABLE `ps_advice` (
@@ -3972,7 +3973,7 @@ CREATE TABLE `ps_configuration` (
   KEY `name` (`name`),
   KEY `id_shop` (`id_shop`),
   KEY `id_shop_group` (`id_shop_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=462 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=464 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_configuration` VALUES
 ('1',NULL,NULL,'PS_LANG_DEFAULT','1','2023-01-22 23:46:14','2023-01-22 23:46:14'),
@@ -3982,7 +3983,7 @@ INSERT INTO `ps_configuration` VALUES
 ('5',NULL,NULL,'PS_GROUP_FEATURE_ACTIVE','1','2023-01-22 23:46:16','2023-01-22 23:46:16'),
 ('6',NULL,NULL,'PS_CURRENCY_DEFAULT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('7',NULL,NULL,'PS_COUNTRY_DEFAULT','14','0000-00-00 00:00:00','2023-01-22 23:46:18'),
-('8',NULL,NULL,'PS_REWRITING_SETTINGS','0','0000-00-00 00:00:00','2023-01-22 23:46:20'),
+('8',NULL,NULL,'PS_REWRITING_SETTINGS','1','0000-00-00 00:00:00','2023-01-22 23:46:20'),
 ('9',NULL,NULL,'PS_ORDER_OUT_OF_STOCK','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('10',NULL,NULL,'PS_LAST_QTIES','3','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('11',NULL,NULL,'PS_CONDITIONS','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -4089,7 +4090,7 @@ INSERT INTO `ps_configuration` VALUES
 ('112',NULL,NULL,'PS_COOKIE_CHECKIP','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('113',NULL,NULL,'PS_COOKIE_SAMESITE','Lax','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('114',NULL,NULL,'PS_USE_ECOTAX','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-('115',NULL,NULL,'PS_CANONICAL_REDIRECT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
+('115',NULL,NULL,'PS_CANONICAL_REDIRECT','2','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('116',NULL,NULL,'PS_IMG_UPDATE_TIME','1674509053','0000-00-00 00:00:00','2023-01-23 22:24:13'),
 ('117',NULL,NULL,'PS_BACKUP_DROP_TABLE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('118',NULL,NULL,'PS_OS_CHEQUE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -4405,7 +4406,9 @@ INSERT INTO `ps_configuration` VALUES
 ('458',NULL,NULL,'GA_CANCELLED_STATES','[\"6\"]','2023-01-24 11:45:35','2023-01-24 11:45:35'),
 ('459',NULL,NULL,'GA_ACCOUNT_ID','UA-251673081-1','2023-01-24 11:46:36','2023-01-24 11:46:36'),
 ('460',NULL,NULL,'GANALYTICS_CONFIGURATION_OK','1','2023-01-24 11:46:36','2023-01-24 11:48:32'),
-('461',NULL,NULL,'GA_USERID_ENABLED','1','2023-01-24 11:48:27','2023-01-24 11:48:32');
+('461',NULL,NULL,'GA_USERID_ENABLED','1','2023-01-24 11:48:27','2023-01-24 11:48:32'),
+('462',NULL,NULL,'PS_REFERRERS_CACHE_LIKE',' \'2022-12-22 00:00:00\' AND \'2023-01-22 23:59:59\' ','2023-01-24 17:53:33','2023-01-24 17:53:33'),
+('463',NULL,NULL,'PS_REFERRERS_CACHE_DATE','2023-01-24 17:53:33','2023-01-24 17:53:33','2023-01-24 17:53:33');
 /* Scheme for table ps_configuration_kpi */
 DROP TABLE IF EXISTS `ps_configuration_kpi`;
 CREATE TABLE `ps_configuration_kpi` (
@@ -4560,7 +4563,7 @@ CREATE TABLE `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 /* Scheme for table ps_connections_page */
 DROP TABLE IF EXISTS `ps_connections_page`;
