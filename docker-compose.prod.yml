@@ -2,17 +2,15 @@ version: '3'
 
 volumes:
   db-data:
+  prestashop:
 
 services:
   mysql:
-    build:
-      context: .
-      dockerfile: dockerfiles/database.Dockerfile
+    image: ghcr.io/pr0tex/mysql:latest
     ports:
       - "8306:3306"
     volumes:
       - db-data:/var/lib/mysql
-      - ./db-dump:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: prestashop
       MYSQL_DATABASE: prestashop
@@ -22,9 +20,7 @@ services:
       retries: 10
 
   prestashop-git:
-    build:
-      dockerfile: dockerfiles/presta.Dockerfile  
-      context: .
+    image: ghcr.io/pr0tex/prestashop:latest
     environment:
       DB_SERVER: ${DB_SERVER}
       DB_NAME: ${DB_NAME}
@@ -45,7 +41,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-       - ./app:/var/www/html
+       - prestashop:/var/www/html
     depends_on:
       mysql:
         condition: service_healthy
