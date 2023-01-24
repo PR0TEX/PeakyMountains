@@ -1165,7 +1165,7 @@ CREATE TABLE `ps_admin_filter` (
   `filter_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `admin_filter_search_id_idx` (`employee`,`shop`,`controller`,`action`,`filter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `ps_admin_filter` VALUES
 ('1','1','1','','','{\"limit\":50,\"orderBy\":\"id_order\",\"sortOrder\":\"DESC\",\"filters\":[]}','order'),
@@ -1195,7 +1195,8 @@ INSERT INTO `ps_admin_filter` VALUES
 ('25','1','1','','','{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}','cms_page'),
 ('26','1','1','employee','index','{\"limit\":50,\"orderBy\":\"id_employee\",\"sortOrder\":\"asc\",\"filters\":[]}',''),
 ('27','1','1','','','{\"limit\":10,\"orderBy\":\"id_log\",\"sortOrder\":\"desc\",\"filters\":{\"severity\":\"1\"}}','logs'),
-('28','1','1','','','{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}','webservice_key');
+('28','1','1','','','{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}','webservice_key'),
+('29','1','1','','','{\"limit\":50,\"orderBy\":\"id_meta\",\"sortOrder\":\"asc\",\"filters\":[]}','meta');
 /* Scheme for table ps_advice */
 DROP TABLE IF EXISTS `ps_advice`;
 CREATE TABLE `ps_advice` (
@@ -7024,6 +7025,7 @@ CREATE TABLE `ps_category_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_category_product` VALUES
+<<<<<<< HEAD
 ('2','487','1'),
 ('2','488','2'),
 ('2','489','3'),
@@ -7566,6 +7568,62 @@ INSERT INTO `ps_category_product` VALUES
 ('2','52','538'),
 ('2','53','539'),
 ('2','54','540');
+=======
+('2','1','1'),
+('2','2','2'),
+('2','3','3'),
+('2','4','4'),
+('2','5','5'),
+('2','6','6'),
+('2','7','7'),
+('2','8','8'),
+('2','9','9'),
+('2','10','10'),
+('2','11','11'),
+('2','12','12'),
+('2','13','13'),
+('2','14','14'),
+('2','15','15'),
+('2','16','16'),
+('2','17','17'),
+('2','18','18'),
+('2','19','19'),
+('2','20','20'),
+('2','21','21'),
+('3','1','1'),
+('3','2','2'),
+('4','1','1'),
+('5','2','1'),
+('6','7','1'),
+('6','6','2'),
+('6','8','3'),
+('6','10','4'),
+('6','9','5'),
+('6','11','6'),
+('6','15','7'),
+('6','16','8'),
+('6','17','9'),
+('6','18','10'),
+('6','19','11'),
+('7','16','1'),
+('7','17','2'),
+('7','18','3'),
+('8','6','1'),
+('8','7','2'),
+('8','8','3'),
+('8','9','4'),
+('8','10','5'),
+('8','11','6'),
+('8','15','7'),
+('8','19','8'),
+('9','3','1'),
+('9','4','2'),
+('9','5','3'),
+('9','12','4'),
+('9','13','5'),
+('9','14','6'),
+('9','15','7');
+>>>>>>> master
 /* Scheme for table ps_category_shop */
 DROP TABLE IF EXISTS `ps_category_shop`;
 CREATE TABLE `ps_category_shop` (
@@ -8502,11 +8560,19 @@ INSERT INTO `ps_condition` VALUES
 ('8','8','sql','SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN (\"0\", \"My carrier\")','>','0','2','hook','actionObjectCarrierAddAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('9','9','sql','SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN (\"0\", \"My carrier\")','>','1','2','hook','actionObjectCarrierAddAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('10','10','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','0','1','hook','actionObjectProductAddAfter','1','2023-01-24 07:58:45','2023-01-24 08:13:48'),
+<<<<<<< HEAD
 ('11','11','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9','10','hook','actionObjectProductAddAfter','1','2023-01-24 07:58:45','2023-01-24 19:54:19'),
 ('12','12','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99','100','hook','actionObjectProductAddAfter','1','2023-01-24 07:58:45','2023-01-24 20:02:53'),
 ('13','13','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','999','540','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 20:33:47'),
 ('14','14','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9999','540','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 20:33:47'),
 ('15','15','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99999','540','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 20:33:47'),
+=======
+('11','11','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('12','12','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('13','13','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('14','14','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','9999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+('15','15','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','99999','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:45','2023-01-24 18:49:21'),
+>>>>>>> master
 ('16','16','configuration','PS_SHOP_PHONE','!=','0','1','hook','actionAdminStoresControllerUpdate_optionsAfter','1','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('17','17','sql','SELECT COUNT(*) FROM PREFIX_contact','>','2','2','hook','actionObjectContactAddAfter','0','2023-01-24 07:58:45','2023-01-24 07:58:45'),
 ('18','18','sql','SELECT COUNT(*) FROM PREFIX_contact','>','4','2','hook','actionObjectContactAddAfter','0','2023-01-24 07:58:45','2023-01-24 07:58:45'),
@@ -8624,7 +8690,11 @@ INSERT INTO `ps_condition` VALUES
 ('130','376','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%shopgate%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','30','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('131','377','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%moneybookers%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','1','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('132','394','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%sofortbanking%\" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)','>=','30','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
+<<<<<<< HEAD
 ('133','399','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','499','500','hook','actionObjectProductAddAfter','1','2023-01-24 07:58:46','2023-01-24 20:29:48'),
+=======
+('133','399','sql','SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE \"demo_%\"','>','499','1','hook','actionObjectProductAddAfter','0','2023-01-24 07:58:46','2023-01-24 18:49:21'),
+>>>>>>> master
 ('134','424','sql','SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like \"%alliance3%\"','>=','1','0','hook','actionModuleInstallAfter','0','2023-01-24 07:58:46','2023-01-24 11:45:35'),
 ('135','425','sql','SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE \'ALLIANCE3_CONFIGURATION_OK\') AND ( value = \'1\')) OR (( name LIKE \'ALLIANCE_DEMO\') AND ( value = \'0\'))','==','2','0','time','1','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
 ('136','426','sql','SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like \"%alliance3%\" AND os.logable = 1','>=','1','0','time','2','0','2023-01-24 07:58:46','2023-01-24 07:58:46'),
@@ -9006,7 +9076,7 @@ CREATE TABLE `ps_configuration` (
   KEY `name` (`name`),
   KEY `id_shop` (`id_shop`),
   KEY `id_shop_group` (`id_shop_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=462 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=464 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_configuration` VALUES
 ('1',NULL,NULL,'PS_LANG_DEFAULT','1','2023-01-22 23:46:14','2023-01-22 23:46:14'),
@@ -9016,7 +9086,7 @@ INSERT INTO `ps_configuration` VALUES
 ('5',NULL,NULL,'PS_GROUP_FEATURE_ACTIVE','1','2023-01-22 23:46:16','2023-01-22 23:46:16'),
 ('6',NULL,NULL,'PS_CURRENCY_DEFAULT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('7',NULL,NULL,'PS_COUNTRY_DEFAULT','14','0000-00-00 00:00:00','2023-01-22 23:46:18'),
-('8',NULL,NULL,'PS_REWRITING_SETTINGS','0','0000-00-00 00:00:00','2023-01-22 23:46:20'),
+('8',NULL,NULL,'PS_REWRITING_SETTINGS','1','0000-00-00 00:00:00','2023-01-22 23:46:20'),
 ('9',NULL,NULL,'PS_ORDER_OUT_OF_STOCK','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('10',NULL,NULL,'PS_LAST_QTIES','3','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('11',NULL,NULL,'PS_CONDITIONS','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -9123,7 +9193,7 @@ INSERT INTO `ps_configuration` VALUES
 ('112',NULL,NULL,'PS_COOKIE_CHECKIP','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('113',NULL,NULL,'PS_COOKIE_SAMESITE','Lax','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('114',NULL,NULL,'PS_USE_ECOTAX','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-('115',NULL,NULL,'PS_CANONICAL_REDIRECT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
+('115',NULL,NULL,'PS_CANONICAL_REDIRECT','2','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('116',NULL,NULL,'PS_IMG_UPDATE_TIME','1674509053','0000-00-00 00:00:00','2023-01-23 22:24:13'),
 ('117',NULL,NULL,'PS_BACKUP_DROP_TABLE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('118',NULL,NULL,'PS_OS_CHEQUE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -9156,7 +9226,7 @@ INSERT INTO `ps_configuration` VALUES
 ('145',NULL,NULL,'PS_VIRTUAL_PROD_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-22 23:47:38'),
 ('146',NULL,NULL,'PS_CUSTOMIZATION_FEATURE_ACTIVE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('147',NULL,NULL,'PS_CART_RULE_FEATURE_ACTIVE','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-('148',NULL,NULL,'PS_PACK_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-22 23:47:41'),
+('148',NULL,NULL,'PS_PACK_FEATURE_ACTIVE','1','0000-00-00 00:00:00','2023-01-24 18:51:41'),
 ('149',NULL,NULL,'PS_ALIAS_FEATURE_ACTIVE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('150',NULL,NULL,'PS_TAX_ADDRESS_TYPE','id_address_delivery','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 ('151',NULL,NULL,'PS_SHOP_DEFAULT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -9439,7 +9509,9 @@ INSERT INTO `ps_configuration` VALUES
 ('458',NULL,NULL,'GA_CANCELLED_STATES','[\"6\"]','2023-01-24 11:45:35','2023-01-24 11:45:35'),
 ('459',NULL,NULL,'GA_ACCOUNT_ID','UA-251673081-1','2023-01-24 11:46:36','2023-01-24 11:46:36'),
 ('460',NULL,NULL,'GANALYTICS_CONFIGURATION_OK','1','2023-01-24 11:46:36','2023-01-24 11:48:32'),
-('461',NULL,NULL,'GA_USERID_ENABLED','1','2023-01-24 11:48:27','2023-01-24 11:48:32');
+('461',NULL,NULL,'GA_USERID_ENABLED','1','2023-01-24 11:48:27','2023-01-24 11:48:32'),
+('462',NULL,NULL,'PS_REFERRERS_CACHE_LIKE',' \'2022-12-22 00:00:00\' AND \'2023-01-22 23:59:59\' ','2023-01-24 17:53:33','2023-01-24 17:53:33'),
+('463',NULL,NULL,'PS_REFERRERS_CACHE_DATE','2023-01-24 17:53:33','2023-01-24 17:53:33','2023-01-24 17:53:33');
 /* Scheme for table ps_configuration_kpi */
 DROP TABLE IF EXISTS `ps_configuration_kpi`;
 CREATE TABLE `ps_configuration_kpi` (
@@ -9594,7 +9666,11 @@ CREATE TABLE `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+>>>>>>> master
 
 /* Scheme for table ps_connections_page */
 DROP TABLE IF EXISTS `ps_connections_page`;
@@ -10797,6 +10873,7 @@ CREATE TABLE `ps_eventbus_incremental_sync` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `ps_eventbus_incremental_sync` VALUES
+<<<<<<< HEAD
 ('categories','3','1','pl','2023-01-24 18:23:55'),
 ('categories','4','1','pl','2023-01-24 18:23:55'),
 ('categories','5','1','pl','2023-01-24 18:23:55'),
@@ -13102,6 +13179,12 @@ INSERT INTO `ps_eventbus_incremental_sync` VALUES
 ('specific_prices','441','1','pl','2023-01-24 20:32:02'),
 ('specific_prices','442','1','pl','2023-01-24 20:32:06'),
 ('specific_prices','443','1','pl','2023-01-24 20:32:10');
+=======
+('custom_product_carriers','20','1','pl','2023-01-24 08:13:48'),
+('custom_product_carriers','21','1','pl','2023-01-24 18:51:41'),
+('products','20','1','pl','2023-01-24 08:13:48'),
+('products','21','1','pl','2023-01-24 18:51:41');
+>>>>>>> master
 /* Scheme for table ps_eventbus_job */
 DROP TABLE IF EXISTS `ps_eventbus_job`;
 CREATE TABLE `ps_eventbus_job` (
@@ -25782,6 +25865,7 @@ CREATE TABLE `ps_layered_price_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `ps_layered_price_index` VALUES
+<<<<<<< HEAD
 ('1','1','1','169.990000','169.990000','14'),
 ('2','1','1','199.990000','199.990000','14'),
 ('3','1','1','89.990000','89.990000','14'),
@@ -26324,6 +26408,29 @@ INSERT INTO `ps_layered_price_index` VALUES
 ('538','1','1','631.343100','914.990000','14'),
 ('539','1','1','631.343100','914.990000','14'),
 ('540','1','1','631.343100','914.990000','14');
+=======
+('1','1','1','23.517600','29.397000','14'),
+('2','1','1','35.325600','44.157000','14'),
+('3','1','1','35.670000','35.670000','14'),
+('4','1','1','35.670000','35.670000','14'),
+('5','1','1','35.670000','35.670000','14'),
+('6','1','1','14.637000','14.637000','14'),
+('7','1','1','14.637000','14.637000','14'),
+('8','1','1','14.637000','14.637000','14'),
+('9','1','1','23.247000','23.247000','14'),
+('10','1','1','23.247000','23.247000','14'),
+('11','1','1','23.247000','23.247000','14'),
+('12','1','1','11.070000','11.070000','14'),
+('13','1','1','11.070000','11.070000','14'),
+('14','1','1','11.070000','11.070000','14'),
+('15','1','1','43.050000','43.050000','14'),
+('16','1','1','15.867000','15.867000','14'),
+('17','1','1','15.867000','15.867000','14'),
+('18','1','1','15.867000','15.867000','14'),
+('19','1','1','17.097000','17.097000','14'),
+('20','1','1','0.000000','0.000000','14'),
+('21','1','1','0.000000','0.000000','14');
+>>>>>>> master
 /* Scheme for table ps_layered_product_attribute */
 DROP TABLE IF EXISTS `ps_layered_product_attribute`;
 CREATE TABLE `ps_layered_product_attribute` (
@@ -27276,7 +27383,11 @@ CREATE TABLE `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=480 DEFAULT CHARSET=utf8mb4;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=265 DEFAULT CHARSET=utf8mb4;
+>>>>>>> master
 
 INSERT INTO `ps_log` VALUES
 ('1','1','0','Exporting mail with theme modern for language Polski (Polish)',NULL,'0','1',NULL,'0','0','0','2023-01-22 23:46:12','2023-01-22 23:46:12'),
@@ -27539,6 +27650,7 @@ INSERT INTO `ps_log` VALUES
 ('257','1','0','Exporting mail with theme modern for language Polski (Polish)',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
 ('258','1','0','Core output folder: /var/www/html/mails',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
 ('259','1','0','Modules output folder: /var/www/html/modules/',NULL,'0','1',NULL,'1','0','1','2023-01-24 12:00:39','2023-01-24 12:00:39'),
+<<<<<<< HEAD
 ('260','1','0','Połączenie z panelem administracyjnym z 172.24.0.1',NULL,'0',NULL,NULL,'1','1','1','2023-01-24 18:20:09','2023-01-24 18:20:09'),
 ('261','1','0','import Kategorie (od 0 do 5) z zaokrągleniem',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:23:53','2023-01-24 18:23:53'),
 ('262','1','0','import Kategorie (od 5 do 20) z zaokrągleniem',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:23:53','2023-01-24 18:23:53'),
@@ -27760,6 +27872,13 @@ INSERT INTO `ps_log` VALUES
 ('477','1','0','import Kombinacje (od 1873 do 96) z zaokrągleniem',NULL,'0','1',NULL,'1','0','1','2023-01-24 20:36:43','2023-01-24 20:36:43'),
 ('478','1','0','import Kombinacje (od 1969 do 95) z zaokrągleniem',NULL,'0','1',NULL,'1','0','1','2023-01-24 20:36:48','2023-01-24 20:36:48'),
 ('479','1','0','import Kombinacje (od 2064 do 93) z zaokrągleniem',NULL,'0','1',NULL,'1','0','1','2023-01-24 20:36:53','2023-01-24 20:36:53');
+=======
+('260','3','0','No result was found for query although at least one row was expected.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:47:42','2023-01-24 18:47:42'),
+('261','3','0','You must specify as many arguments (%d, %s ...) as the original string.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:47:42','2023-01-24 18:47:42'),
+('262','3','0','No result was found for query although at least one row was expected.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:48:13','2023-01-24 18:48:13'),
+('263','3','0','You must specify as many arguments (%d, %s ...) as the original string.',NULL,'0','1',NULL,'1','0','1','2023-01-24 18:48:13','2023-01-24 18:48:13'),
+('264','1','0','Product modification','Product','21','1',NULL,'1','0','1','2023-01-24 18:51:41','2023-01-24 18:51:41');
+>>>>>>> master
 /* Scheme for table ps_mail */
 DROP TABLE IF EXISTS `ps_mail`;
 CREATE TABLE `ps_mail` (
@@ -29263,6 +29382,7 @@ CREATE TABLE `ps_product` (
   KEY `indexed` (`indexed`),
   KEY `date_add` (`date_add`),
   KEY `state` (`state`,`date_upd`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=541 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_product` VALUES
@@ -29808,6 +29928,32 @@ INSERT INTO `ps_product` VALUES
 ('538','0','0','2','1','0','1','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','2076','2023-01-24 19:58:13','2023-01-24 20:36:50','0','3','1','combinations'),
 ('539','0','0','2','1','0','1','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','2101','2023-01-24 19:58:13','2023-01-24 20:36:51','0','3','1','combinations'),
 ('540','0','0','2','1','0','1','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','2126','2023-01-24 19:58:13','2023-01-24 20:36:53','0','3','1','combinations');
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `ps_product` VALUES
+('1','1','1','4','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','23.900000','0.000000',NULL,'0.000000','0.000000','demo_1',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','1','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('2','1','1','5','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','35.900000','0.000000',NULL,'0.000000','0.000000','demo_3',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','0','0','0','9','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('3','1','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','demo_6',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','13','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('4','1','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','demo_5',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','0','0','0','16','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('5','1','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','demo_7',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','19','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('6','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','demo_11',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','standard'),
+('7','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','demo_12',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','standard'),
+('8','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','demo_13',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','0','0','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','standard'),
+('9','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','demo_15',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','22','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('10','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','demo_16',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','24','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('11','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','demo_17',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','26','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','combinations'),
+('12','2','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','demo_18',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','1','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','virtual'),
+('13','2','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','demo_19',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','1','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','virtual'),
+('14','2','2','9','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','demo_20',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','1','0','2023-01-22 23:47:38','2023-01-22 23:47:38','0','3','1','virtual'),
+('15','2','0','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','35.000000','0.000000',NULL,'0.000000','0.000000','demo_21',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','1','0','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','pack'),
+('16','2','2','7','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','demo_8',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','28','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','combinations'),
+('17','2','2','7','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','demo_9',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','32','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','combinations'),
+('18','2','2','7','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','demo_10',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','36','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','combinations'),
+('19','2','1','8','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','13.900000','0.000000',NULL,'0.000000','0.000000','demo_14',NULL,'','0.000000','0.000000','0.000000','0.300000','2','1','0','1','0','1','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','0','3','1','standard'),
+('20','0','0','2','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','0','3','0',''),
+('21','0','0','2','1','1','0','0',NULL,NULL,NULL,NULL,'0.000000','0','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000',NULL,NULL,'','0.000000','0.000000','0.000000','0.000000','2','1','0','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','0','0','2023-01-24 18:49:21','2023-01-24 18:51:41','0','3','1','');
+>>>>>>> master
 /* Scheme for table ps_product_attachment */
 DROP TABLE IF EXISTS `ps_product_attachment`;
 CREATE TABLE `ps_product_attachment` (
@@ -38682,6 +38828,7 @@ CREATE TABLE `ps_product_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_product_lang` VALUES
+<<<<<<< HEAD
 ('1','1','1','Kominiarka Ultimate Direction BalaBeanie to sposób na outdoorowe przygody w niskich temperaturach. Syntetyczne materiały sprawnie odprowadzą wszelki pot pojawiający się na skórze, zapewniając Ci dużo komfortu. Długo można wymieniać zalety kominiarki Ultimate Direction BalaBeanie. Zastosowane włókna cechują się rozciągliwością, co pozwoli Ci zachować jakże potrzebną swobodę ruchów. Kominiarka Ultimate Direction BalaBeanie jest bardzo wszechstronna. Bez problemu wykorzystasz ją jako klasyczną szybkoschnącą czapkę.  Kominiarka Ultimate Direction BalaBeanie - najważniejsze cechy: 	Możliwość wykorzystania jako kominiarka lub czapka 	Właściwości szybkoschnące 	Optymalna rozciągliwość 	Daszek chroniący przed słońcem, możliwy do schowania 	Lekkość.',NULL,'kominiarka-ultimate-direction-balabeanie-hthgrey',NULL,NULL,NULL,'Kominiarka Ultimate Direction BalaBeanie - hth.grey',NULL,NULL,NULL,NULL),
 ('2','1','1','Koszulka bawełniana Patagonia Fitz Roy Ivon Responsibili-Tee - sisu brown to konstrukcja wykonana z bawełny i poliestru w proporcji 1:1. Model przypadnie do gustu miłośnikom klasycznego stylu. Subtelne logo marki na piersi oraz outdoorowa grafika na rękawie podkreślą Twoje zamiłowanie do gór i natury. Model, który właśnie oglądasz, został wyprodukowany w sposób zrównoważony i etyczny, co potwierdza certyfikat Fair Trade™. Ekologiczny charakter koszulki Patagonia Fitz Roy Ivon Responsibili-Tee - sisu brown podkreśla przyznany temu modelowi standard bluesign®. Koszulka bawełniana Patagonia Fitz Roy Ivon Responsibili-Tee - sisu brown w składzie materiałowym łączy naturalne włókna bawełny oraz syntetyczny poliester. Oba materiały zostały pozyskane metodą recyklingu. Miękka w dotyku dla skóry bawełna zapewnia komfort noszenia oraz przewiewność.  Koszulka Patagonia Fitz Roy Ivon Responsibili-Tee - sisu brown - najważniejsze cechy: 	Połączenie naturalnej bawełny oraz szybkoschnącego poliestru 	Przyjazność dla skóry 	Skrócony czas schnięcia 	Oddychalność 	Krój Regular Fit 	Koszulka wykonana w standardzie bluesign® 	Koszulka posiadająca certyfikat Fair Trade Certified™, oznaczający uczciwą płacę za pracę pracowników fabryk 	Z wykorzystaniem materiałów z recyklingu 	Model unisex.',NULL,'koszulka-bawelniana-patagonia-fitz-roy-ivon-responsibili-tee-sisu-brown',NULL,NULL,NULL,'Koszulka bawełniana Patagonia Fitz Roy Ivon Responsibili-Tee - sisu brown',NULL,NULL,NULL,NULL),
 ('3','1','1','T shirt męski Carhartt K87 Pocket S/S T-Shirt - alpine blue to przewodni projekt amerykańskiej marki powstały w 1992 roku. Charakteryzuje się prostotą oraz luźniejszym krojem wspierającym mobilność. Koszulka męska Carhartt K87 Pocket S/S T-Shirt - alpine blue powstał z naturalnego włókna bawełny, która jest znana z procesu cyrkulacji powietrza wokół skóry. Dzięki tej tkaninie koszulka posiada miękką w dotyku strukturę i sprawnie chłonie wilgoć. Z kolei elementem wyróżniającym ją, jest płaska kieszeń usytuowana na lewej piersi.  T shirt Carhartt K87 Pocket S/S T-Shirt - alpine blue - najważniejsze cechy: 	    Uszyta z wysokogatunkowej bawełny 	    Wysoka gramatura 	    Luźniejszy krój Relaxed Fit 	    Płaska kieszeń na lewej piersi.',NULL,'t-shirt-meski-carhartt-k87-pocket-s-s-t-shirt-alpine-blue',NULL,NULL,NULL,'T shirt męski Carhartt K87 Pocket S/S T-Shirt - alpine blue',NULL,NULL,NULL,NULL),
@@ -39224,6 +39371,29 @@ INSERT INTO `ps_product_lang` VALUES
 ('538','1','1','Buty trekkingowe wysokie Scarpa Rush TRK GTX - titanium/lime to połączenie niskiej wagi, komfortu oraz funkcjonalności, które dotrzyma Ci koku podczas niewymagających hikingów, czy bardziej technicznych trekkingów w wymagających warunkach. Buty trekkingowe wysokie Scarpa Rush TRK GTX - titanium/lime swtorzono w oparciu o wysokiej jakości cholewkę, wykonaną ze skóry zamszowej o grubości 1,7-1,9 mm. Jest odporna na uszkodzenia, a także zachowuje naturalną oddychalność. Zastosowanie kołnierza Autofit 3D zwiększa komfort noszenia oraz zapewnia bezpieczeństwo podczas poruszania się w wymagającym, technicznym terenie. Bardzo ważnym elementem budowy modelu jest obecność membrany GORE-TEX® Extended Comfort. Dzięki niej nie musisz obawiać się przemoczenia podczas opadów deszczu.    Standardowy system wiązania butów pozwoli Ci na perfekcyjne dopasowanie ich do własnych preferencji, a długi język i podwyższony stan buta zapobiegnie przedostawaniu się nieczystości do jego wnętrza. Podeszwa tego modelu to Presa® TRK-01, która posiada solidny bieżnik zapewniający doskonałą przyczepność w zróżnicowanym terenie. Specjalna technologia IKS (Interactive Kinetic System) zapewnia dodatkową amortyzację i przyczepność poprzez zastosowanie specjalnych stref w podeszwie, które kompresują się pod wpływem nacisku na podłoże, równocześnie umożliwiając kontakt dodatkowych kostek bieżnika z podłożem. Pozwala tym samym na spędzenie wielu godzin na szlaku przy mniejszym zmęczeniu stóp.  Buty Scarpa Rush TRK GTX - titanium/lime – najważniejsze cechy: 	Doskonale spiszą się podczas szybkich wypadów trekkingowych 	Cholewka wykonana ze skóry zamszowej 	Kołnierz Autofit 3D, który maksymalizuje komfort użytkowania butów i zwiększa bezpieczeństwo podczas poruszania się w trudnym technicznie terenie 	Membrana GORE-TEX® Extended Comfort Footwear zadba nie tylko ochronę przed wodą, ale zapewni również odpowiedni poziom oddychalności 	Standardowy system wiązania za pomocą sznurowadeł 	Długi język i podwyższony stan buta zapobiegnie przedostawaniu się nieczystości do jego wnętrza 	Podeszwa Presa® TRK-01 z gumy SuperGum zapewniająca doskonałą przyczepność 	Technologia IKS (Interactive Kinetic System) zapewnia dodatkową amortyzację i zwiększoną przyczepność',NULL,'buty-trekkingowe-wysokie-scarpa-rush-trk-gtx-titanium-lime',NULL,NULL,NULL,'Buty trekkingowe wysokie Scarpa Rush TRK GTX - titanium/lime',NULL,NULL,NULL,NULL),
 ('539','1','1','Buty GORE TEX damskie Scarpa Mojito Hike GTX - conifer/raspberry to model z wyższą cholewką, zaprojektowany z myślą o miłośnikach hikingu bez większego ekwipunku. To kolejny przedstawiciel rodziny Mojito, w której każdy użytkownik znajdzie coś odpowiedniego do swoich potrzeb. Buty GORE TEX damskie Scarpa Mojito Hike GTX - conifer/raspberry to przede wszystkim zamszowa cholewka wykonana z wysokiej jakości skóry. Nie tylko chroni model przed uszkodzeniami, ale także wspiera naturalną oddychalność. Model został wyposażony w wodoodporną membranę GORE-TEX® Extended Comfort, dzięki czemu zadba o ochronę przed ulewnymi deszczami, mogącymi zaskoczyć Cię na szlaku. Całość wyposażono także w gumowy otok, zapewniający ochronę oraz zwiększoną amortyzację podczas nieumyślnego uderzenia.  Jednym z najważniejszych elementów obuwia górskiego jest podeszwa. Guma Vibram® XS Trek to gwarancja przyczepności oraz doskonałej trakcji podczas poruszania się w zróżnicowanym terenie, od kamienistych podejść po leśne ścieżki. Śródpodeszwa z pianki EVA zadba o odpowiednią amortyzację, znacząco podnoszącą komfort noszenia. Za wygodę noszenia odpowiada także system wiązania zaczerpnięty z butów wspinaczkowych- sznurowanie zaczynające się tuż przy palcach to gwarancja dopasowania modelu do każdej stopy.  Buty Scarpa Mojito Hike GTX - conifer/raspberry – najważniejsze cechy: 	Idealnie spiszą się podczas szybkich wypadów na szlak 	Doskonała przyczepność zarówno na skalistym podłożu jak i na leśnych ścieżkach 	Cholewka wykonana ze skóry zamszowej 	Membrana GORE-TEX® Extended Comfort zapewniająca właściwości wodoodporne 	Podeszwa Vibram® XS Trek 	Sródpodeszwa wykonana z pianki EVA 	Gumowy otok 	Wiązanie inspirowane designem butów wspinaczkowych,',NULL,'buty-gore-tex-damskie-scarpa-mojito-hike-gtx-conifer-raspberry',NULL,NULL,NULL,'Buty GORE TEX damskie Scarpa Mojito Hike GTX - conifer/raspberry',NULL,NULL,NULL,NULL),
 ('540','1','1','Buty trekkingowe wysokie Scarpa Rush TRK GTX - pagoda blue/mango to wielozadaniowy model, który dotrzyma Ci kroku podczas długich trekkingów oraz krótszych wypadów hikingowych. Dzięki obecności wodoodpornej membrany Gore-Tex nie musisz rezygnować z aktywności podczas nagłego załamania pogody. Buty trekkingowe wysokie Scarpa Rush TRK GTX - pagoda blue/mango swtorzono w oparciu o wysokiej jakości cholewkę, wykonaną ze skóry zamszowej o grubości 1,7-1,9 mm. Jest odporna na uszkodzenia, a także zachowuje naturalną oddychalność. Zastosowanie kołnierza Autofit 3D zwiększa komfort noszenia oraz zapewnia bezpieczeństwo podczas poruszania się w wymagającym, technicznym terenie. Bardzo ważnym elementem budowy modelu jest obecność membrany GORE-TEX® Extended Comfort. Dzięki niej nie musisz obawiać się przemoczenia podczas opadów deszczu.    Standardowy system wiązania butów pozwoli Ci na perfekcyjne dopasowanie ich do własnych preferencji, a długi język i podwyższony stan buta zapobiegnie przedostawaniu się nieczystości do jego wnętrza. Podeszwa tego modelu to Presa® TRK-01, która posiada solidny bieżnik zapewniający doskonałą przyczepność w zróżnicowanym terenie. Specjalna technologia IKS (Interactive Kinetic System) zapewnia dodatkową amortyzację i przyczepność poprzez zastosowanie specjalnych stref w podeszwie, które kompresują się pod wpływem nacisku na podłoże, równocześnie umożliwiając kontakt dodatkowych kostek bieżnika z podłożem. Pozwala tym samym na spędzenie wielu godzin na szlaku przy mniejszym zmęczeniu stóp.  Buty Scarpa Rush TRK GTX – najważniejsze cechy: 	Doskonale spiszą się podczas szybkich wypadów trekkingowych 	Cholewka wykonana ze skóry zamszowej 	Kołnierz Autofit 3D, który maksymalizuje komfort użytkowania butów i zwiększa bezpieczeństwo podczas poruszania się w trudnym technicznie terenie 	Membrana GORE-TEX® Extended Comfort Footwear zadba nie tylko ochronę przed wodą, ale zapewni również odpowiedni poziom oddychalności 	Standardowy system wiązania za pomocą sznurowadeł 	Długi język i podwyższony stan buta zapobiegnie przedostawaniu się nieczystości do jego wnętrza 	Podeszwa Presa® TRK-01 z gumy SuperGum zapewniająca doskonałą przyczepność 	Technologia IKS (Interactive Kinetic System) zapewnia dodatkową amortyzację i zwiększoną przyczepność',NULL,'buty-trekkingowe-wysokie-scarpa-rush-trk-gtx-pagoda-blue-mango',NULL,NULL,NULL,'Buty trekkingowe wysokie Scarpa Rush TRK GTX - pagoda blue/mango',NULL,NULL,NULL,NULL);
+=======
+('1','1','1','<p>Symbol of lightness and delicacy, the hummingbird evokes curiosity and joy. Studio Design\' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>','<p>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </p>\r\n<p></p>','hummingbird-printed-t-shirt',NULL,NULL,NULL,'Hummingbird printed t-shirt',NULL,NULL,NULL,NULL),
+('2','1','1','<p>Studio Design\' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>','<p>Regular fit, round neckline, long sleeves. 100% cotton, brushed inner side for extra comfort. </p>','brown-bear-printed-sweater',NULL,NULL,NULL,'Hummingbird printed sweater',NULL,NULL,NULL,NULL),
+('3','1','1','<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>','<p>Printed on rigid matt paper and smooth surface.</p>','the-best-is-yet-to-come-framed-poster',NULL,NULL,NULL,'The best is yet to come\' Framed poster',NULL,NULL,NULL,NULL),
+('4','1','1','<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>','<p>Printed on rigid matt finish and smooth surface.</p>','the-adventure-begins-framed-poster',NULL,NULL,NULL,'The adventure begins Framed poster',NULL,NULL,NULL,NULL),
+('5','1','1','<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>','<p>Printed on rigid paper with matt finish and smooth surface.</p>','today-is-a-good-day-framed-poster',NULL,NULL,NULL,'Today is a good day Framed poster',NULL,NULL,NULL,NULL),
+('6','1','1','<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>','<p>White Ceramic Mug, 325ml.</p>','mug-the-best-is-yet-to-come',NULL,NULL,NULL,'Mug The best is yet to come',NULL,NULL,NULL,NULL),
+('7','1','1','<p>The adventure begins with a cup of coffee. Set out to conquer the day! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>','<p>White Ceramic Mug. 325ml</p>','mug-the-adventure-begins',NULL,NULL,NULL,'Mug The adventure begins',NULL,NULL,NULL,NULL),
+('8','1','1','<p>Add an optimistic touch to your morning coffee and start the day in a good mood! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>','<p>White Ceramic Mug. 325ml</p>','mug-today-is-a-good-day',NULL,NULL,NULL,'Mug Today is a good day',NULL,NULL,NULL,NULL),
+('9','1','1','<p>The mountain fox cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>','<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>','mountain-fox-cushion',NULL,NULL,NULL,'Mountain fox cushion',NULL,NULL,NULL,NULL),
+('10','1','1','<p>The brown bear cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>','<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>','brown-bear-cushion',NULL,NULL,NULL,'Brown bear cushion',NULL,NULL,NULL,NULL),
+('11','1','1','<p>The hummingbird cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>','<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>','hummingbird-cushion',NULL,NULL,NULL,'Hummingbird cushion',NULL,NULL,NULL,NULL),
+('12','1','1','<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>','<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>','mountain-fox-vector-graphics',NULL,NULL,NULL,'Mountain fox - Vector graphics',NULL,NULL,NULL,NULL),
+('13','1','1','<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>','<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>','brown-bear-vector-graphics',NULL,NULL,NULL,'Brown bear - Vector graphics',NULL,NULL,NULL,NULL),
+('14','1','1','<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>','<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>','hummingbird-vector-graphics',NULL,NULL,NULL,'Hummingbird - Vector graphics',NULL,NULL,NULL,NULL),
+('15','1','1',NULL,'<p>Mug The Adventure Begins + Framed poster Today is a good day 40x60cm </p>','pack-mug-framed-poster',NULL,NULL,NULL,'Pack Mug + Framed poster',NULL,NULL,NULL,NULL),
+('16','1','1','<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>','<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>','mountain-fox-notebook',NULL,NULL,NULL,'Mountain fox notebook',NULL,NULL,NULL,NULL),
+('17','1','1','<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>','<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>','brown-bear-notebook',NULL,NULL,NULL,'Brown bear notebook',NULL,NULL,NULL,NULL),
+('18','1','1','<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>','<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>','hummingbird-notebook',NULL,NULL,NULL,'Hummingbird notebook',NULL,NULL,NULL,NULL),
+('19','1','1','<p>Customize your mug with the text of your choice. A mood, a message, a quote... It\'s up to you! Maximum number of characters: ---</p>','<p>White Ceramic Mug. 325ml</p>','customizable-mug',NULL,NULL,NULL,'Customizable mug',NULL,NULL,NULL,NULL),
+('20','1','1',NULL,NULL,'',NULL,NULL,NULL,'',NULL,NULL,NULL,NULL),
+('21','1','1','<p>test</p>','<p>test</p>','test',NULL,NULL,NULL,'Test',NULL,NULL,NULL,NULL);
+>>>>>>> master
 /* Scheme for table ps_product_sale */
 DROP TABLE IF EXISTS `ps_product_sale`;
 CREATE TABLE `ps_product_sale` (
@@ -39278,6 +39448,7 @@ CREATE TABLE `ps_product_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_product_shop` VALUES
+<<<<<<< HEAD
 ('1','1','2','0','1','0','0.000000','1',NULL,'0','169.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 20:28:53','2023-01-24 20:28:53','3'),
 ('2','1','2','0','0','0','0.000000','1',NULL,'0','199.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 20:28:53','2023-01-24 20:28:53','3'),
 ('3','1','2','0','0','0','0.000000','1',NULL,'0','89.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 20:28:53','2023-01-24 20:28:53','3'),
@@ -39820,6 +39991,29 @@ INSERT INTO `ps_product_shop` VALUES
 ('538','1','2','0','1','0','0.000000','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','2076','0','2023-01-24 19:58:13','2023-01-24 20:36:50','3'),
 ('539','1','2','0','1','0','0.000000','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','2101','0','2023-01-24 19:58:13','2023-01-24 20:36:51','3'),
 ('540','1','2','0','1','0','0.000000','1',NULL,'0','914.990000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','0','both','2126','0','2023-01-24 19:58:13','2023-01-24 20:36:53','3');
+=======
+('1','1','4','1','0','0','0.000000','1',NULL,'0','23.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','1','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('2','1','5','1','0','0','0.000000','1',NULL,'0','35.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','9','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('3','1','9','1','0','0','0.000000','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','13','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('4','1','9','1','0','0','0.000000','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','16','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('5','1','9','1','0','0','0.000000','1',NULL,'0','29.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','19','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('6','1','8','1','0','0','0.000000','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('7','1','8','1','0','0','0.000000','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('8','1','8','1','0','0','0.000000','1',NULL,'0','11.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','404','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('9','1','8','1','0','0','0.000000','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','22','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('10','1','8','1','0','0','0.000000','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','24','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('11','1','8','1','0','0','0.000000','1',NULL,'0','18.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','26','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('12','1','9','1','0','0','0.000000','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('13','1','9','1','0','0','0.000000','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('14','1','9','1','0','0','0.000000','1',NULL,'0','9.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:38','2023-01-22 23:47:38','3'),
+('15','1','8','1','0','0','0.000000','1',NULL,'0','35.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
+('16','1','7','1','0','0','0.000000','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','28','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
+('17','1','7','1','0','0','0.000000','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','32','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
+('18','1','7','1','0','0','0.000000','1',NULL,'0','12.900000','0.000000',NULL,'0.000000','0.000000','0','0','0','1','301-category','0','1','0000-00-00','0','new','1','1','both','36','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
+('19','1','8','1','0','0','0.000000','1',NULL,'0','13.900000','0.000000',NULL,'0.000000','0.000000','1','0','1','1','301-category','0','1','0000-00-00','0','new','1','1','both','0','0','2023-01-22 23:47:39','2023-01-22 23:47:39','3'),
+('20','1','2','1','0','0','0.000000','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 08:13:48','2023-01-24 08:13:48','3'),
+('21','1','2','1','0','0','0.000000','1',NULL,'0','0.000000','0.000000',NULL,'0.000000','0.000000','0','0','0','0','404','0','1','0000-00-00','0','new','1','0','both','0','0','2023-01-24 18:49:21','2023-01-24 18:51:41','3');
+>>>>>>> master
 /* Scheme for table ps_product_supplier */
 DROP TABLE IF EXISTS `ps_product_supplier`;
 CREATE TABLE `ps_product_supplier` (
@@ -41676,8 +41870,10 @@ CREATE TABLE `ps_specific_price_priority` (
   `priority` varchar(80) NOT NULL,
   PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   UNIQUE KEY `id_product` (`id_product`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `ps_specific_price_priority` VALUES
+('1','21','id_shop;id_currency;id_country;id_group');
 /* Scheme for table ps_specific_price_rule */
 DROP TABLE IF EXISTS `ps_specific_price_rule`;
 CREATE TABLE `ps_specific_price_rule` (
@@ -42140,6 +42336,7 @@ CREATE TABLE `ps_stock_available` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_product` (`id_product`),
   KEY `id_product_attribute` (`id_product_attribute`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=2691 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ps_stock_available` VALUES
@@ -44846,6 +45043,71 @@ INSERT INTO `ps_stock_available` VALUES
 ('2688','540','2148','1','0','19','0','0','0','2',''),
 ('2689','540','2149','1','0','11','0','0','0','2',''),
 ('2690','540','2150','1','0','14','0','0','0','2','');
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `ps_stock_available` VALUES
+('1','1','0','1','0','2400','2400','0','0','2',''),
+('2','2','0','1','0','2100','2100','0','0','2',''),
+('3','3','0','1','0','1500','1500','0','0','2',''),
+('4','4','0','1','0','1500','1500','0','0','2',''),
+('5','5','0','1','0','900','900','0','0','2',''),
+('6','6','0','1','0','300','300','0','0','2',''),
+('7','7','0','1','0','300','300','0','0','2',''),
+('8','8','0','1','0','300','301','1','0','2',''),
+('9','9','0','1','0','600','600','0','0','2',''),
+('10','10','0','1','0','600','600','0','0','2',''),
+('11','11','0','1','0','600','600','0','0','2',''),
+('12','12','0','1','0','300','300','0','0','1',''),
+('13','13','0','1','0','300','300','0','0','1',''),
+('14','14','0','1','0','300','300','0','0','1',''),
+('15','15','0','1','0','100','100','0','0','2',''),
+('16','16','0','1','0','1200','1200','0','0','2',''),
+('17','17','0','1','0','1200','1200','0','0','2',''),
+('18','18','0','1','0','1200','1200','0','0','2',''),
+('19','19','0','1','0','300','300','0','0','2',''),
+('20','1','1','1','0','300','300','0','0','2',''),
+('21','1','2','1','0','300','300','0','0','2',''),
+('22','1','3','1','0','300','300','0','0','2',''),
+('23','1','4','1','0','300','300','0','0','2',''),
+('24','1','5','1','0','300','300','0','0','2',''),
+('25','1','6','1','0','300','300','0','0','2',''),
+('26','1','7','1','0','300','300','0','0','2',''),
+('27','1','8','1','0','300','300','0','0','2',''),
+('28','2','9','1','0','1200','1200','0','0','2',''),
+('29','2','10','1','0','300','300','0','0','2',''),
+('30','2','11','1','0','300','300','0','0','2',''),
+('31','2','12','1','0','300','300','0','0','2',''),
+('32','3','13','1','0','900','900','0','0','2',''),
+('33','3','14','1','0','300','300','0','0','2',''),
+('34','3','15','1','0','300','300','0','0','2',''),
+('35','4','16','1','0','900','900','0','0','2',''),
+('36','4','17','1','0','300','300','0','0','2',''),
+('37','4','18','1','0','300','302','2','0','2',''),
+('38','5','19','1','0','300','300','0','0','2',''),
+('39','5','20','1','0','300','300','0','0','2',''),
+('40','5','21','1','0','300','300','0','0','2',''),
+('41','9','22','1','0','300','300','0','0','2',''),
+('42','9','23','1','0','300','300','0','0','2',''),
+('43','10','24','1','0','300','300','0','0','2',''),
+('44','10','25','1','0','300','300','0','0','2',''),
+('45','11','26','1','0','300','300','0','0','2',''),
+('46','11','27','1','0','300','300','0','0','2',''),
+('47','16','28','1','0','300','300','0','0','2',''),
+('48','16','29','1','0','300','301','1','0','2',''),
+('49','16','30','1','0','300','300','0','0','2',''),
+('50','16','31','1','0','300','300','0','0','2',''),
+('51','17','32','1','0','300','300','0','0','2',''),
+('52','17','33','1','0','300','300','0','0','2',''),
+('53','17','34','1','0','300','300','0','0','2',''),
+('54','17','35','1','0','300','300','0','0','2',''),
+('55','18','36','1','0','300','300','0','0','2',''),
+('56','18','37','1','0','300','300','0','0','2',''),
+('57','18','38','1','0','300','300','0','0','2',''),
+('58','18','39','1','0','300','300','0','0','2',''),
+('59','20','0','1','0','0','0','0','0','2',''),
+('60','21','0','1','0','0','0','0','0','2','');
+>>>>>>> master
 /* Scheme for table ps_stock_mvt */
 DROP TABLE IF EXISTS `ps_stock_mvt`;
 CREATE TABLE `ps_stock_mvt` (
