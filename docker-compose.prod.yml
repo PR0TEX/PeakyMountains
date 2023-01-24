@@ -1,16 +1,16 @@
 version: '3'
 
 volumes:
-  db-data:
-  prestashop:
+  be_184344_db-data:
+  be_184344_prestashop:
 
 services:
-  mysql:
+  BE_184344_mysql:
     image: ghcr.io/pr0tex/mysql:latest
     ports:
       - "8306:3306"
     volumes:
-      - db-data:/var/lib/mysql
+      - be_184344_db-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: prestashop
       MYSQL_DATABASE: prestashop
@@ -18,8 +18,14 @@ services:
       test: [ "CMD", "mysqladmin" ,"ping", "-u${DB_USER}", "-p${DB_PASSWD}" ]
       interval: 10s
       retries: 10
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 3s
+        max_attempts: 5
+        window: 60s
 
-  prestashop-git:
+  BE_184344_prestashop:
     image: ghcr.io/pr0tex/prestashop:latest
     environment:
       DB_SERVER: ${DB_SERVER}
@@ -38,10 +44,16 @@ services:
       SHOP_HTTP_PORT: ${SHOP_HTTPS_PORT}
       SHOP_HTTPS_PORT: ${SHOP_HTTPS_PORT}
     ports:
-      - 80:80
-      - 443:443
+      - "${SHOP_HTTP_PORT}:80"
+      - "${SHOP_HTTPS_PORT}:443"
     volumes:
-       - prestashop:/var/www/html
+       - be_184344_prestashop:/var/www/html
     depends_on:
-      mysql:
+      BE_184344_mysql:
         condition: service_healthy
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 3s
+        max_attempts: 5
+        window: 60s
