@@ -1,0 +1,47 @@
+version: '3'
+
+volumes:
+  db-data:
+  prestashop:
+
+services:
+  mysql:
+    image: ghcr.io/pr0tex/mysql:latest
+    ports:
+      - "8306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: prestashop
+      MYSQL_DATABASE: prestashop
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-u${DB_USER}", "-p${DB_PASSWD}" ]
+      interval: 10s
+      retries: 10
+
+  prestashop-git:
+    image: ghcr.io/pr0tex/prestashop:latest
+    environment:
+      DB_SERVER: ${DB_SERVER}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWD: ${DB_PASSWD}
+      PS_LANGUAGE: ${PS_LANGUAGE}
+      PS_COUNTRY: ${PS_COUNTRY}
+      PS_INSTALL_AUTO: ${PS_INSTALL_AUTO}
+      PS_ERASE_DB: ${PS_ERASE_DB}
+      PS_DEMO_MODE: ${PS_DEMO_MODE}
+      PS_INSTALL_DB: ${PS_INSTALL_DB}
+      PS_DOMAIN: ${PS_DOMAIN}
+      PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
+      PS_ENABLE_SSL: ${PS_ENABLE_SSL}
+      SHOP_HTTP_PORT: ${SHOP_HTTPS_PORT}
+      SHOP_HTTPS_PORT: ${SHOP_HTTPS_PORT}
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+       - prestashop:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
