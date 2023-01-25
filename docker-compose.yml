@@ -4,7 +4,7 @@ volumes:
   db-data:
 
 services:
-  mysql:
+  be_184344_mysql:
     image: ghcr.io/pr0tex/mysql:latest
     build:
       context: .
@@ -22,7 +22,7 @@ services:
       interval: 10s
       retries: 10
 
-  prestashop-git:
+  be_184344_prestashop:
     image: ghcr.io/pr0tex/prestashop:latest
     build:
       dockerfile: dockerfiles/presta.Dockerfile  
@@ -41,13 +41,13 @@ services:
       PS_DOMAIN: ${PS_DOMAIN}
       PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
       PS_ENABLE_SSL: ${PS_ENABLE_SSL}
-      SHOP_HTTP_PORT: ${SHOP_HTTPS_PORT}
-      SHOP_HTTPS_PORT: ${SHOP_HTTPS_PORT}
+      SHOP_HTTP_PORT: 80
+      SHOP_HTTPS_PORT: 443
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     volumes:
        - ./app:/var/www/html
     depends_on:
-      mysql:
+      be_184344_mysql:
         condition: service_healthy
