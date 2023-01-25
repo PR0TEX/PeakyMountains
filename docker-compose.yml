@@ -4,7 +4,7 @@ volumes:
   db-data:
 
 services:
-  mysql:
+  be_184344_mysql:
     image: ghcr.io/pr0tex/mysql:latest
     build:
       context: .
@@ -22,7 +22,7 @@ services:
       interval: 10s
       retries: 10
 
-  prestashop-git:
+  be_184344_prestashop:
     image: ghcr.io/pr0tex/prestashop:latest
     build:
       dockerfile: dockerfiles/presta.Dockerfile  
@@ -49,5 +49,5 @@ services:
     volumes:
        - ./app:/var/www/html
     depends_on:
-      mysql:
+      be_184344_mysql:
         condition: service_healthy
